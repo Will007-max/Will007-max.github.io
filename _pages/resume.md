@@ -32,72 +32,54 @@ classes: wide
 }
 </style>
 
-
-
-<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="fr_FR" data-type="horizontal" data-theme="light" data-vanity="mael-fabien"><a class="LI-simple-link" href='https://ch.linkedin.com/in/mael-fabien?trk=profile-badge'>Maël Fabien</a></div>
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="fr_FR" data-type="horizontal" data-theme="light"><a class="LI-simple-link" href='https://www.linkedin.com/in/william-b-djampa-tapi-a2a17b110/'>William Tapi</a></div>
 
 <br>
 
 # Technical stack
 
-- Data science, machine learning, DevOps tools:
-  - **Spark**: PySpark, dataframes manipulation, data exploration, databases queries, machine learning
-  - **FastAPI**: web REST API to deploy machine learning models, 
-
+- **Data science, machine learning, DevOps tools:**
+  - **Spark**: PySpark, data frame manipulation, data exploration, database queries, machine learning
+  - **FastAPI**: implementation of web REST API for the machine learning models, interaction with MongoDB for data persistence
+  - **Flask**: creation of web application with HTML templates in order to deploy and use the machine learning models
+  - **Docker, Cloud**: machine learning model containerization (integrating Flask), deployment on servers in the Cloud
+  - **Kubernetes**: container orchestration, service management and scalability, deployment on servers in the Cloud
+  - **AWS, GCP cloud**: selection and setup of servers for deployment and storage, Nginx web server
+  - **Git/GitHub**: collaborative work and version control (focused on Python machine learning package), pull and merge requests
+  - **Dash - Plotly**: creation of dashboards, dynamic graphs with Plotly, and integration in a web application with Dash
+  - **Data collection**: SQL queries (MySQL, SQLite), NoSQL(MongoDB), web scrapping, JSON and API, CSV files
+  - **Data analysis**: Numpy, Pandas, Data visualization, data exploration, feature engineering
+- **IT skills:** unit tests, Python, R, C, SQL, HTML, CSS, PHP, Java, shell scripting, Ansible, Vagrant
+- **Knowledge:** computer tools, programming, machine learning, artificial intelligence, applied mathematics, statistics, probability, data science, nanoscience and nanotechnology, materials science, mechanics, fundamental physics, chemistry
+- **Know-how:** scientific expertise, data processing and analysis, in-depth and objective analysis, teaching, scientific survey, implementation of innovative axes with research tools and methods, research project management, management and resolution of complex problems, experimental physics
 
 # Teaching
 
-- 11.2019: Data Science Instructor, [Dakar Institute of Technology](https://dit.sn/)
-  - Dakar Institute of Technology is an AI school in Dakar, Senegal
-  - I gave 3 weeks of courses in Data Engineering and Deep Learning
+- 2018 - 2020: Teacher, Instructor, Monitor [Paris-Saclay University](www.universite-paris-saclay.fr)
+  - Teach students (double degree) the courses and tutorials of numerical approaches with Python
+  - Suggest improvements to the courses, tutorials, examinations, and evaluate the students' level
+  - Anticipating student difficulties in the course and in the implemented platform
+  - Monitor L1 students in the framework of their professional project
 
-- 10.2019: Machine Learning Instructor, [Stat4Decision](https://www.stat4decision.com/)
-  - Stat4Decision is a consulting and training company
-  - I provided 3 days intensive trainings « Python for Data Science » in the banking industry.
-  - My intervention recieved the grade of 9/10 from participants
-
-- 02.2019 - Present: Data Science Instructor, [Vivadata](https://vivadata.org/)
-  - Vivadata is a 10-weeks intensive AI bootcamp in Paris
-  - Created course supports and gave over 35 lessons on Stats, ML, DL and Data engineering.
-
-- 02.2017 - 03.2018: Student Assistant in Public Finance, [Institut de Hautes Etudes en Administation Publique](https://www.unil.ch/idheap/en/home.html) (20%)
-  - Idheap is the leading institue in Switzerland for public policy/finance studies
-  - Assisting Pr. Soguel and PhDs in tasks such as course support update, data base cleaning and updating
-
-- 09.2016 - 02.2017: Student Assistant in Corporate Finance, [HEC Lausanne](https://www.unil.ch/hec/en/home.html) (40%)
-  - Assisting Pr. Nikolov in creation and correction of exercises, answering student's questions in my office weekly, correcting problem sets in class and correcting exams.
 
 # Experience
 
-- 11.2019 - 12.2019: Natural Language Processing Consulting, [Orange Senegal](https://www.orange.sn/)
-  - Implemented a customer support Chatbot for Orange Senegal (Sonatel)
-  - Match user queries with a question/answer database
-  - Trained a POS-weighted Word2Vec, an LSTM-based intent classifier and deployed it on Streamlit
-  - Gave a 3 hours lecture on Advanced Natural Language Processing in front of data sience teams
-  - *Python, Natural Language Processing, Tensorflow*
+- 10.2017 - 09.2020: scientific researcher, [CEA Saclay](http://iramis.cea.fr/spec/LEPO/)
+  - Assemble the main part of the experimental setup to measure several optical properties of nano-objects
+  - Leading innovative research activities in nanoscience in collaboration with chemists
+  - Schedule and carry out experimental measurements, interpret results, draw conclusions
+  - Implement Python programs to efficiently process and analyze experimental data
+  - Write reports and describe the progress of conducted activities: discuss and exchange with peers
 
-- 07.2019 - 11.209: Data Scientist Intern, [Anasen](https://www.anasen.com/)
-  - Anasen is a Y-Combinator data platform
-  - Created innovative algorithms for automated String Transformations Understanding from examples using tree-based structures and genetic algorithms. Worked with back-end and front-end engineers, R&D, end-users.
-  - *Python, Algorithm optimisation, Natural Language Processing*
+- 07.2019 - 11.209: research engineer assistant, [ENS Paris-Saclay](https://ens-paris-saclay.fr)
+  - Conduct literature research and consolidate scientific knowledge for the project
+  - Realize, by using several platforms, samples to be characterized
+  - Schedule and perform fluorescence microscopy experiments, interpret data and results
 
-- 03.2019 - 07.2019: Data Scientist Intern, [Veamly](https://veamly.com/) (Part time)
-  - Veamly is a productivity application gathering information of several channels in a single feed
-  - Designed and implemented a Semantic Similarity Search Engine for the search function of the application. I also implemented Bert for next sentence prediction.
-  - *Python, Search Engine, Hierarchical Embedding, BERT, Transformers*
+- 2012 - 2013: web developer apprentice: setting up a dynamic website (Part time)
+  - Design the different web pages with HTML and CSS
+  - Integrate a dynamic feature with PHP and MySQL: save user IDs
 
-- 09.2018 - 05.2019: Deep Learning Research Project, Telecom Paris
-  - Research project over 9 months in group of 4 with the French Employment Agency
-  - Research project for the French employment center on multimodal emotion recognition for Text, Sound and Video. Built deep learning pipelines for real time emotion recognition, deployed the work on a platform. Worked with the French employment agency to propose this platform as an interview training platform for job-seeking candidates.
-  - [Paper](https://maelfabien.github.io/assets/images/PE.pdf)
-  - Supervisor: Chloé Clavel, Affective Computive Associate Professor
-  - *Python, NLTK, Keras, Tensorflow, Flask, HTML, CSS*
-
-- 02.2018 - 08.2018: Non-life Actuary Intern, [Vaudoise Insurance](https://www.vaudoise.ch/fr)
-  - Vaudoise Insurance is a large private insurance company in Switzerland
-  - Redesign of a private Accident Insurance product. Statistical analysis, anomaly
-detection, product pricing (MLE, robustness tests, profit testing, simulations)
-  - *R, VBA, Tableau*
 
 # MOOCs
 

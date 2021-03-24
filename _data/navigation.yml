@@ -5,7 +5,7 @@ main:
   - title: "My Projects"
     url: https://will007-max.github.io
   - title: "CV"
-    url: assets/files/CV_William.pdf
+    url: /resume
   - title: "Search"
     url: https://will007-max.github.io
   # - title: "Sitemap"

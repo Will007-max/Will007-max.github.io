@@ -71,7 +71,7 @@ classes: wide
   - Implement Python programs to efficiently process and analyze experimental data
   - Write reports and describe the progress of conducted activities: discuss and exchange with peers
 
-- 07.2019 - 11.209: research engineer assistant, [ENS Paris-Saclay](https://ens-paris-saclay.fr)
+- 03.2017 - 07.2017: research engineer assistant, [ENS Paris-Saclay](https://ens-paris-saclay.fr)
   - Conduct literature research and consolidate scientific knowledge for the project
   - Realize, by using several platforms, samples to be characterized
   - Schedule and perform fluorescence microscopy experiments, interpret data and results
@@ -83,35 +83,36 @@ classes: wide
 
 # MOOCs
 
-- [Google Cloud Platform Big Data and Machine
-Learning Fundamentals, Coursera](https://www.coursera.org/account/accomplishments/certificate/NVHT6SJTQ3P5)
-- [Java Programming, Udemy](https://www.udemy.com/certificate/UC-KRLWQTSI/)
-- [SQL for Data Science, Udemy](https://www.udemy.com/certificate/UC-B0RSBG2I/)
-- [Python for Data Science, Udemy](https://www.udemy.com/certificate/UC-DRSJYEBW/)
-- [Fundamentals for Big Data, IMT](https://www.udemy.com/certificate/UC-DRSJYEBW/)
-- Machine Learning Explainability, Kaggle
+- [Deep Learning Specialization, Coursera](https://www.coursera.org/account/accomplishments/specialization/F7KBTVAVUYN7)
+- [Machine Learning, Coursera](https://www.coursera.org/account/accomplishments/verify/3QT9RTQ9TBHR)
+- [Bayesian Methods for Machine Learning](https://www.coursera.org/account/accomplishments/verify/NZMJDBSXG9WB)
+- [Bayesian Statistics: From Concept to Data Analysis, Coursera](https://www.coursera.org/account/accomplishments/verify/FGYGUABEEWTC)
+- [Bayesian Statistics: Techniques and Models, Coursera](https://www.coursera.org/account/accomplishments/verify/C4BBQ63X5MD9)
+- [What is Data Science ?, Coursera](https://www.coursera.org/account/accomplishments/verify/FLGGCVRB36UV)
+- [The Data Scientist's Toolbox](https://www.coursera.org/account/accomplishments/verify/HTG6URM66FPJ)
+- [Introduction to Statistics with R, FUN](https://www.fun-mooc.fr/media/attestations/attestation_suivi_course-v1:ParisSaclay+71007+session14_504d8da6cac2ff1d2b433062bb6476a0.pdf)
+- [Fundamentals for Big Data, FUN](https://www.fun-mooc.fr/media/attestations/attestation_suivi_course-v1:MinesTelecom+04006+session10_b8dbe3019f5b7e0c7068ca5a32bc581e.pdf)
+- [Deep Learning, FUN](https://www.fun-mooc.fr/media/attestations/attestation_suivi_course-v1:CNAM+01031+session02_2459390e9216a4f213eb9283640448c9.pdf)
 
 # Education
 
-| Degree | University | Start date | End date | GPA |
+| Degree | University | Start date | End date |
 | --- | --- | --- | --- | --- |
-| Ph.D. in ML and Speech Processing | EPFL & Idiap Research Institute | 03.2020 | --- | --- |
-| [Specialized Master in Big Data and Data Science](https://www.telecom-paris.fr/fr/masteres-specialises/tous-les-ms/big-data) | Telecom Paris, Institut Polytechnique de Paris | 09.2018 | 04.2020 | 17.02/20 |
-| [Master of Science in Actuarial Science](https://www.unil.ch/hec/en/home/menuinst/etudes/masters/sciences-actuarielles.html) | HEC Faculty, University of Lausanne | 09.2016 | 07.2018 | 5.2/6 |
-| [Bachelor of Science in Economics](https://www.unil.ch/formations/en/home/menuinst/bachelors/economie-politique.html) | HEC Faculty, University of Lausanne | 09.2013 | 07.2016 | 5.0/6 |
-| Scientific Baccalaureate, Option Mathematics and Bilingual | Lycée International de Ferney-Voltaire | 09.2010 | 07.2013 |  |
+| Ph.D. in nanoscience | CEA - Paris-Saclay University | 10.2017 | 09.2020 |
+| [Master 2 - nanophysics](http://www.nanosciences.universite-paris-saclay.fr/master-nanosciences-u-psud.jimdofree.com/index.html) | Paris-Saclay University | 09.2016 | 09.2017 |
+| Master degree - material science | University of Yaounde 1 | 09.2014 | 07.2016 |
+| [Preparatory classes / Bachelor](http://sciences.univ-lemans.fr/) | Le Mans Univesity | 2011 | 2014 |
 
 
 # Languages
 
 - French (Mother Tongue)
-- English (C2, Bilingual Baccalaureate)
-- German (B2)
+- English (Professional working proficiency)
 
 # Interests
 
-- ML and Data Science
-- Sports (Fitness, running, hiking)
-- Travel (South East Asia, Australia, New Zealand, Greenland)
-- Writing
-- History
+- Science and technology popularization
+- Data science, machine learning, deep learning
+- Volunteering, exchanges, general culture
+- Sports (fitness, bodybuilding, sports programs)
+- Music (listening)

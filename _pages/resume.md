@@ -32,8 +32,6 @@ classes: wide
 }
 </style
 
-<button class="button" onclick="location.href='https://will007-max.github.io/assets/images/CV_MF.pdf'" type="button"> </button>
-
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
 

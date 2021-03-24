@@ -32,11 +32,12 @@ classes: wide
 }
 </style
 
-<button class="button" onclick="location.href='https://will007-max.github.io/assets/images/CV_MF.pdf'" type="button">Download the PDF version</button>
+<button class="button" onclick="location.href='https://will007-max.github.io/assets/images/CV_MF.pdf'" type="button"> </button>
 
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
-<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="fr_FR" data-type="horizontal" data-theme="light"><a class="LI-simple-link" href='https://www.linkedin.com/in/william-b-djampa-tapi-a2a17b110/'>William Tapi</a></div>
+
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="fr_FR" data-type="horizontal" data-theme="light" data-vanity="mael-fabien"><a class="LI-simple-link" href='https://www.linkedin.com/in/william-b-djampa-tapi-a2a17b110'>William Tapi</a></div>
 
 <br>
 

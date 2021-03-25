@@ -1,12 +1,12 @@
 # main links
 main:
-  - title: "My Blog"
-    url: https://will007-max.github.io
+  #- title: "My Blog"
+    #url: https://will007-max.github.io
   - title: "My Projects"
+    url: https://will007-max.github.io
+  - title: "ML documents"
     url: https://will007-max.github.io
   - title: "CV"
     url: /resume
-  - title: "Search"
-    url: https://will007-max.github.io
   # - title: "Sitemap"
   #   url: /sitemap/

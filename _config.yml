@@ -188,7 +188,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Conversion
 markdown: kramdown
-highlighter: rouge
+highlighter: gray
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
@@ -283,6 +283,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true

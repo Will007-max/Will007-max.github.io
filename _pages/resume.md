@@ -5,6 +5,7 @@ author_profile: true
 redirect_from:
   - /resume
 classes: wide
+toc_sticky: true
 ---
 
 <style>

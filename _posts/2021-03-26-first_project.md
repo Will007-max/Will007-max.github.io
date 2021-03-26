@@ -1,8 +1,8 @@
 ---
 published: true
-title: Voice Computing in Python
+title: Organizing my first ML project
 collection: ml
-layout: single
+layout: default
 author_profile: true
 read_time: true
 categories: [machinelearning]

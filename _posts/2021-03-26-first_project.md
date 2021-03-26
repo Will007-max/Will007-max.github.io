@@ -20,7 +20,7 @@ sidebar:
 <!--src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script> -->
 
-Here are some words about how I wrote and organized my first project.
+Here are some words about how I wrote and organized my first project. Who know, it may be useful in some context.
 
 ## I. Context
 
@@ -34,4 +34,6 @@ One goal was to online deploy the project: using a web app with Flask, a REST AP
 
 ## II. First steps
 
-I started by taking a look at all HuggingFace libraries where several pre-trained models (in natural language processing as well as voice processing) are available and just need to be fine-tuned with additional data. There are always many resources in other languages like German and Spanish... A main concept in HuggingFace website deals with transformers: it is a kind of state-of-the-art, but several others libraries are available.
+I started by taking a look at all HuggingFace libraries where several pre-trained models (in natural language processing as well as voice processing) are available and just need to be fine-tuned with additional data. There are always many resources in other languages like German and Spanish... A main concept in HuggingFace website deals with transformers: it is a kind of state-of-the-art, but several others libraries are available and could always be used... As in most cases, handling new tools is still challenging, in order to start mastering it, I looked at basic examples where transformers are used.
+
+In order to train machine learning models, we have to use data. Those data must be appropriate for the current problem in order to draw the best conclusions. Firstly, I found some available datasets on Kaggle. So, this part could already considered as done. Another point was to start implementing on Google Colab in order to leverage GPU computing; in addition, HuggingFace already contains many Colab notebooks to fine-tune algorithms slightly_smiling_face.

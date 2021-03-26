@@ -31,3 +31,7 @@ Because emotions may be expressed on faces and via voice tones, a priori, this c
 I was even wondering where to find data to feed to my machine learning algorithms, and how to train them ? I meant what kind of models could be applied in order to have great performances. In addition, could I locally train my models ? or I must use cloud infrastructures and online notebooks and frameworks ? Another point was to getting started and to learn the main concepts to master and manage my project. On of my supervisor suggests to me to simply start with audio and text processing since it might be quite tricky with the three channels.
 
 One goal was to online deploy the project: using a web app with Flask, a REST API with FastAPI, and Heroku, Ploty Express and Dash, or even Streamlit... we learn some interesting ways even including Docker and Kubernetes to deploy on servers in the Cloud. I thought this part of my project was the easiest because I was able to handle it comfortably.
+
+## II. First steps
+
+I started by taking a look at all HuggingFace libraries where several pre-trained models (in natural language processing as well as voice processing) are available and just need to be fine-tuned with additional data. There are always many resources in other languages like German and Spanish... A main concept in HuggingFace website deals with transformers: it is a kind of state-of-the-art, but several others libraries are available.

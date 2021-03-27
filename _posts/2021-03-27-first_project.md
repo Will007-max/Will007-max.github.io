@@ -30,7 +30,7 @@ Because emotions may be expressed on faces and via voice tones, a priori, this c
 
 I was even wondering where to find data to feed to my machine learning algorithms, and how to train them ? I meant what kind of models could be applied in order to have great performances. In addition, could I locally train my models ? or must I use cloud infrastructures and online notebooks and frameworks ? Another point was to getting started and to learn the main concepts to master and manage my project. One of my supervisor suggests me to simply start with audio and text processing since it might be quite tricky with the three channels.
 
-One goal was to online deploy the project: using a web app with Flask, a REST API with FastAPI, and Heroku, Ploty Express and Dash, or even Streamlit... indeed during the training, we learn some interesting ways for doing this kind of implementation even including Docker and Kubernetes to deploy on servers in the Cloud. I thought this part of my project was the easiest because I was able to handle it comfortably.
+One goal was to online deploy the project: using a web app with Flask, a REST API with FastAPI, and Heroku, Plotly Express and Dash, or even Streamlit... indeed during the training, we learn some interesting ways for doing this kind of implementation even including Docker and Kubernetes to deploy on servers in the Cloud. I thought this part of my project was the easiest because I was able to handle it comfortably.
 
 ## II. First steps
 

@@ -5,9 +5,9 @@ collection: ml
 layout: single
 author_profile: true
 read_time: true
-categories: [machinelearning]
+#categories: [machinelearning]
 excerpt : "Writing"
-header :
+#header :
     #overlay_image: "https://maelfabien.github.io/assets/images/wolf.jpg"
     #teaser : "https://maelfabien.github.io/assets/images/wolf.jpg"
 comments : true

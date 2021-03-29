@@ -3,6 +3,12 @@ layout: archive
 tilte: 'My Projects'
 permalink: /projects/
 author_profile: true
+
+comments : true
+toc: true
+toc_sticky: true
+sidebar:
+    nav: sidebar-sample
 ---
 
 Currently, I am realizing several machine learning projects, they are focused on deep learning for processing audio, text and videos in order to determine emotions in communication...

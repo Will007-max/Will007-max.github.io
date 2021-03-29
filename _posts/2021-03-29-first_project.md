@@ -6,15 +6,16 @@ layout: single
 author_profile: true
 read_time: true
 #categories: [machinelearning]
+categories: machinelearning
 excerpt : "Writing"
 #header :
     #overlay_image: "https://maelfabien.github.io/assets/images/wolf.jpg"
     #teaser : "https://maelfabien.github.io/assets/images/wolf.jpg"
-comments : true
-toc: true
-toc_sticky: true
-sidebar:
-    nav: sidebar-sample
+#comments : true
+#toc: true
+#toc_sticky: true
+#sidebar:
+    #nav: sidebar-sample
 ---
 
 <!--src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">

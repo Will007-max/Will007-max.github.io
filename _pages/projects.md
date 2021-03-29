@@ -7,6 +7,11 @@ author_profile: true
 
 Currently, I am realizing several machine learning projects, they are focused on deep learning for processing audio, text and videos in order to determine emotions in communication...
 
+## I. Working with MFCC features using Librosa
+
+
+## II. Audio features with Wav2Vec2
+
 <br>
 <br>
 

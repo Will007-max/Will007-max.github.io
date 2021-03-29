@@ -40,7 +40,7 @@ We need data to train machine learning models, and in order to draw the best con
 
 Since I had to use *Google Colab*, I started by importing all needed files in my *Google Drive*. I wanted to extract features from different files in order to feed a machine learning model. The dataset contains many files grouped in folders (voice categories, actors...) and the name of each voice file contains informations: in that order there are in sequence  *modality* (01 = audio and video, 02 = video only, 03 = audio only), *voice channel* (01 = speech, 02 = song), *emotion* **(01 = neutral, 02 = calm, 03 = happy, 04 = sad, 05 = angry, 06 = fearful, 07 = disgust, 08 = surprised)**, *emotional intensity* (01 = normal, 02 = strong). For each file, it is necessary to match the extracted features with its corresponding name (path) and label, and stored all in a dataframe to ease future data manipulations.
 
-## III. Starting with HuggingFace and Librosa libraries
+## III. HuggingFace and Librosa libraries
 
 My first research about *transformers* applied to audio led me to automatic speech recognition (ASR). A library dealing with audio files is Wav2Vec, it is similar to Word2Vec which is used for word embeddings: *meaningful embeddings (vectors) are learned from raw data* (audio or text).
 

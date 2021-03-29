@@ -44,6 +44,11 @@ Since I had to use *Google Colab*, I started by importing all needed files in my
 
 My first research about *transformers* applied to audio led me to automatic speech recognition (ASR). A library dealing with audio files is Wav2Vec, it is similar to Word2Vec which is used for word embeddings: *meaningful embeddings (vectors) are learned from raw data* (audio or text).
 
-It is usually established that emotion detection in speech may be done through linguistics (choice of the use words) and/or paralinguistics (acoustic waves from audio).
+It is usually established that emotion detection in speech may be done through linguistics (words are used for semantics) and/or paralinguistics (acoustic waves from audio).
 
 Talking about transformers, in the case of speech emotion recognition, we can ask to ourselves if the trained *contextual* representations of raw audio (obtained from Wav2Vec for instance) also contain emotional content. To answer this question, it might be interesting to compare performance resulting of the use of these representations to performance with other descriptors like the spectrogram features or Mel-Frequency Cepstral Coefficients (MFCC) resulting from Fourier analysis of the audio file in the frequency domain.
+
+### III.1. Extraction of MFCC features using Librosa
+
+
+### III.2. Audio features with Wav2Vec2

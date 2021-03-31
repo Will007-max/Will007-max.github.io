@@ -1,0 +1,164 @@
+I"M<style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #7187bd;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #7187bd}
+
+.button:active {
+  background-color: #7187bd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async="" defer=""></script>
+
+<div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="fr_FR" data-type="horizontal" data-theme="light" data-vanity="william-b-djampa-tapi-a2a17b110"><a class="LI-simple-link" href="https://www.linkedin.com/in/william-b-djampa-tapi-a2a17b110/?trk=profile-badge">William Tapi</a></div>
+
+<p><br /></p>
+
+<h1 id="technical-stack">Technical stack</h1>
+
+<ul>
+  <li><strong>Data science, machine learning, DevOps tools:</strong>
+    <ul>
+      <li><strong>Spark</strong>: PySpark, data frame manipulation, data exploration, database queries, machine learning</li>
+      <li><strong>FastAPI</strong>: implementation of web REST API for the machine learning models, interaction with MongoDB for data persistence</li>
+      <li><strong>Flask</strong>: creation of web application with HTML templates in order to deploy and use the machine learning models</li>
+      <li><strong>Docker, Cloud</strong>: machine learning model containerization (integrating Flask), deployment on servers in the Cloud</li>
+      <li><strong>Kubernetes</strong>: container orchestration, service management and scalability, deployment on servers in the Cloud</li>
+      <li><strong>AWS, GCP cloud</strong>: selection and setup of servers for deployment and storage, Nginx web server</li>
+      <li><strong>Git/GitHub</strong>: collaborative work and version control (focused on Python machine learning package), pull and merge requests</li>
+      <li><strong>Dash - Plotly</strong>: creation of dashboards, dynamic graphs with Plotly, and integration in a web application with Dash</li>
+      <li><strong>Data collection</strong>: SQL queries (MySQL, SQLite), NoSQL(MongoDB), web scrapping, JSON and API, CSV files</li>
+      <li><strong>Data analysis</strong>: Numpy, Pandas, Data visualization, data exploration, feature engineering</li>
+    </ul>
+  </li>
+  <li><strong>IT skills:</strong> unit tests, Python, R, C, SQL, HTML, CSS, PHP, Java, shell scripting, Ansible, Vagrant</li>
+  <li><strong>Knowledge:</strong> computer tools, programming, machine learning, artificial intelligence, applied mathematics, statistics, probability, data science, nanoscience and nanotechnology, materials science, mechanics, fundamental physics, chemistry</li>
+  <li><strong>Know-how:</strong> scientific expertise, data processing and analysis, in-depth and objective analysis, teaching, scientific survey, implementation of innovative axes with research tools and methods, research project management, management and resolution of complex problems, experimental physics</li>
+</ul>
+
+<h1 id="teaching">Teaching</h1>
+
+<ul>
+  <li>2018 - 2020: Teacher, Instructor, Monitor <a href="www.universite-paris-saclay.fr">Paris-Saclay University</a>
+    <ul>
+      <li>Teach students (double degree) the courses and tutorials of numerical approaches with Python</li>
+      <li>Suggest improvements to the courses, tutorials, examinations, and evaluate the students’ level</li>
+      <li>Anticipating student difficulties in the course and in the implemented platform</li>
+      <li>Monitor L1 students in the framework of their professional project</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="experience">Experience</h1>
+
+<ul>
+  <li>10.2017 - 09.2020: scientific researcher, <a href="http://iramis.cea.fr/spec/LEPO/">CEA Saclay</a>
+    <ul>
+      <li>Assemble the main part of the experimental setup to measure several optical properties of nano-objects</li>
+      <li>Leading innovative research activities in nanoscience in collaboration with chemists</li>
+      <li>Schedule and carry out experimental measurements, interpret results, draw conclusions</li>
+      <li>Implement Python programs to efficiently process and analyze experimental data</li>
+      <li>Write reports and describe the progress of conducted activities: discuss and exchange with peers</li>
+    </ul>
+  </li>
+  <li>03.2017 - 07.2017: research engineer assistant, <a href="https://ens-paris-saclay.fr">ENS Paris-Saclay</a>
+    <ul>
+      <li>Conduct literature research and consolidate scientific knowledge for the project</li>
+      <li>Realize, by using several platforms, samples to be characterized</li>
+      <li>Schedule and perform fluorescence microscopy experiments, interpret data and results</li>
+    </ul>
+  </li>
+  <li>2012 - 2013: web developer apprentice: setting up a dynamic website (Part time)
+    <ul>
+      <li>Design the different web pages with HTML and CSS</li>
+      <li>Integrate a dynamic feature with PHP and MySQL: save user IDs</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="moocs">MOOCs</h1>
+
+<ul>
+  <li><a href="https://www.coursera.org/account/accomplishments/specialization/F7KBTVAVUYN7">Deep Learning Specialization, Coursera</a></li>
+  <li><a href="https://www.coursera.org/account/accomplishments/verify/3QT9RTQ9TBHR">Machine Learning, Coursera</a></li>
+  <li><a href="https://www.coursera.org/account/accomplishments/verify/NZMJDBSXG9WB">Bayesian Methods for Machine Learning</a></li>
+  <li><a href="https://www.coursera.org/account/accomplishments/verify/FGYGUABEEWTC">Bayesian Statistics: From Concept to Data Analysis, Coursera</a></li>
+  <li><a href="https://www.coursera.org/account/accomplishments/verify/C4BBQ63X5MD9">Bayesian Statistics: Techniques and Models, Coursera</a></li>
+  <li><a href="https://www.coursera.org/account/accomplishments/verify/FLGGCVRB36UV">What is Data Science ?, Coursera</a></li>
+  <li><a href="https://www.coursera.org/account/accomplishments/verify/HTG6URM66FPJ">The Data Scientist’s Toolbox</a></li>
+  <li><a href="https://www.fun-mooc.fr/media/attestations/attestation_suivi_course-v1:ParisSaclay+71007+session14_504d8da6cac2ff1d2b433062bb6476a0.pdf">Introduction to Statistics with R, FUN</a></li>
+  <li><a href="https://www.fun-mooc.fr/media/attestations/attestation_suivi_course-v1:MinesTelecom+04006+session10_b8dbe3019f5b7e0c7068ca5a32bc581e.pdf">Fundamentals for Big Data, FUN</a></li>
+  <li><a href="https://www.fun-mooc.fr/media/attestations/attestation_suivi_course-v1:CNAM+01031+session02_2459390e9216a4f213eb9283640448c9.pdf">Deep Learning, FUN</a></li>
+</ul>
+
+<h1 id="education">Education</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Degree</th>
+      <th>University</th>
+      <th>Start date</th>
+      <th>End date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ph.D. in nanoscience</td>
+      <td>CEA - Paris-Saclay University</td>
+      <td>10.2017</td>
+      <td>09.2020</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nanosciences.universite-paris-saclay.fr/master-nanosciences-u-psud.jimdofree.com/index.html">Master 2 - nanophysics</a></td>
+      <td>Paris-Saclay University</td>
+      <td>09.2016</td>
+      <td>09.2017</td>
+    </tr>
+    <tr>
+      <td>Master degree - material science</td>
+      <td>University of Yaounde 1</td>
+      <td>09.2014</td>
+      <td>07.2016</td>
+    </tr>
+    <tr>
+      <td><a href="http://sciences.univ-lemans.fr/">Preparatory classes / Bachelor</a></td>
+      <td>Le Mans Univesity</td>
+      <td>2011</td>
+      <td>2014</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="languages">Languages</h1>
+
+<ul>
+  <li>French (Mother Tongue)</li>
+  <li>English (Professional working proficiency)</li>
+</ul>
+
+<h1 id="interests">Interests</h1>
+
+<ul>
+  <li>Science and technology popularization</li>
+  <li>Data science, machine learning, deep learning</li>
+  <li>Volunteering, exchanges, general culture</li>
+  <li>Sports (fitness, bodybuilding, sports programs)</li>
+  <li>Music (listening)</li>
+</ul>
+:ET

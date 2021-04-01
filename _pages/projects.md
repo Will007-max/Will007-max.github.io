@@ -25,6 +25,14 @@ For a better understanding, I would start by reminding some concepts upstream of
 
 ### I.1. Audio representations
 
+#### I.1.1. Audio wave form
 
+<%@ Language="Python" %>
+
+<%
+
+print('Hello world') 
+
+%>
 
 ## II. Audio features with Wav2Vec2

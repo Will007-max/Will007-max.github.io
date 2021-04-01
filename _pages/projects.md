@@ -25,14 +25,12 @@ For a better understanding, I would start by reminding some concepts upstream of
 
 ### I.1. Audio representations
 
-#### I.1.1. Audio wave form
+#### I.1.1. Audio wave
 
-<%@ Language="Python" %>
+Sound is a mechanical wave that is transmitted from a source in an elastic medium. The perturbation is a local change of the atmospheric pressure causing the vibrations of the air molecules. Human beings and many animals feel this wave through the sense of hearing.
 
-<%
+Typically, an audio wave has a form as represented in the following figure, where the time-evolution of the perturbation amplitude is represented.
 
-print('Hello world') 
-
-%>
+![Image](/assets/images/audio_wave.png)
 
 ## II. Audio features with Wav2Vec2

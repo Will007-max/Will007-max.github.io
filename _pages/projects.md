@@ -43,3 +43,5 @@ A  visualisation is shown on the following figure where time is on x-axis, frequ
 #### I.1.3. MFCC features
 
 ## II. Audio features with Wav2Vec2
+
+Wav2Vec2 is a vectorized representation of audio files that is feeded to machine learning algorithms. It is similar to word2vec used for word embeddings in natural language processing. After training to learn these features, this vector supposedly carries more representation information than other types of features, these are recent advancements in audio processing.

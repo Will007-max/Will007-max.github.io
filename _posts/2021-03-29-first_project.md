@@ -1,21 +1,21 @@
 ---
 published: true
 title: Organizing my first ML project
-collection: ml
+#collection: ml
 layout: single
 author_profile: true
 read_time: true
 #categories: [machinelearning]
-categories: machinelearning
+#categories: machinelearning
 excerpt : "Writing"
 #header :
     #overlay_image: "https://maelfabien.github.io/assets/images/wolf.jpg"
     #teaser : "https://maelfabien.github.io/assets/images/wolf.jpg"
-#comments : true
-#toc: true
-#toc_sticky: true
-#sidebar:
-    #nav: sidebar-sample
+comments : true
+toc: true
+toc_sticky: true
+sidebar:
+    nav: sidebar-sample
 ---
 
 <!--src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -47,4 +47,4 @@ My first research about *transformers* applied to audio led me to automatic spee
 
 It is usually established that emotion detection in speech may be done through linguistics (words are used for semantics) and/or paralinguistics (acoustic waves from audio).
 
-Talking about transformers, in the case of speech emotion recognition, we can ask to ourselves if the trained *contextual* representations of raw audio (obtained from Wav2Vec for instance) also contain emotional content. To answer this question, it might be interesting to compare performance resulting of the use of these representations to performance with other descriptors like the spectrogram features or Mel-Frequency Cepstral Coefficients (MFCC) resulting from Fourier analysis of the audio file in the frequency domain.
+Talking about transformers, in the case of speech emotion recognition, we can ask to ourselves if the trained *contextual* representations of raw audio (obtained from Wav2Vec for instance) also contain emotional content. To answer this question, it might be interesting to compare performance resulting of the use of these representations to performance with other descriptors like the spectrogram features or Mel-Frequency Cepstral Coefficients (MFCC) following Fourier analysis of the audio file in the frequency domain.

@@ -30,14 +30,16 @@ Sound is a mechanical wave that is transmitted from a source in an elastic mediu
 
 Typically, an audio wave has a form as represented in the following figure, where the time-evolution of the perturbation amplitude is represented.
 
-![Image](/assets/images/audio_wave.png#center)
+![Image](/assets/images/audio_wave.png#right)
 
-#### I.1.2. spectrogram
+#### I.1.2. Spectrogram
 
 Since for audio signals, there is time-evolution of the frequencies, the well-known Fast-Fourier transform (FFT) allows to visualize the spectrum of each time window, and the spectrogram is obtained when FFT is computed on overlapping windows of the signal.
 
 A  visualisation is shown on the following figure where time is on x-axis, frequency on y-axis and relative intensity on the colorbar.
 
-![Image](/assets/images/spectrogram.png#center)
+![Image](/assets/images/spectrogram.png#right)
+
+#### I.1.3. MFCC features
 
 ## II. Audio features with Wav2Vec2

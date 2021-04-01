@@ -1,9 +1,10 @@
 ---
-layout: archive
+title: Video streaming analysis to detect emotions
+layout: single
 tilte: 'My Projects'
 permalink: /projects/
 author_profile: true
-
+read_time: true
 comments : true
 toc: true
 toc_sticky: true
@@ -19,9 +20,7 @@ Before the introduction of *transformers*, *MFCC coefficients* have been the sta
 
 ## I. Working with MFCC features using Librosa
 
-Many Python librairies deal with signal and audio processing, here I only talk about Librosa.
-
-For a better understanding, I would start by reminding some concepts upstream of the MFCC coefficients.
+Many Python librairies deal with signal and audio processing, here I only talk about Librosa. For a better understanding, I would start by reminding some concepts upstream of the MFCC coefficients.
 
 ### I.1. Audio representations
 
@@ -31,6 +30,14 @@ Sound is a mechanical wave that is transmitted from a source in an elastic mediu
 
 Typically, an audio wave has a form as represented in the following figure, where the time-evolution of the perturbation amplitude is represented.
 
-![Image](/assets/images/audio_wave.png)
+![Image](/assets/images/audio_wave.png#center)
+
+#### I.1.2. spectrogram
+
+Since for audio signals, there is time-evolution of the frequencies, the well-known Fast-Fourier transform (FFT) allows to visualize the spectrum of each time window, and the spectrogram is obtained when FFT is computed on overlapping windows of the signal.
+
+A  visualisation is shown on the following figure where time is on x-axis, frequency on y-axis and relative intensity on the colorbar.
+
+![Image](/assets/images/spectrogram.png#center)
 
 ## II. Audio features with Wav2Vec2

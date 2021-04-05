@@ -40,7 +40,22 @@ A  visualisation is shown on the following figure where time is on x-axis, frequ
 
 ![Image](/assets/images/spectrogram.png#right)
 
+Spectrogram is aa way to process audio data in order to extract interesting features, but for this project I used Mel Frequency Cepstral Coefficients (MFCC) taking into account human perception for sensitivity at frequencies.
+
 #### I.1.3. MFCC features
+
+MFCC are widely used features for audio and speech recognition, and have been the state-of-the-art ever since as they represent the shape of the vocal tract. Following are steps to get insight of how they are computed:
+
+- The audio signal is divided into short frames (20 - 40 ms).
+- For each frame, the periodogram (Fast Fourier Transform) estimate of the power spectrum is calculated.
+- In order to consider our human sensitivity of frequencies, the mel filterbank to the power spectra is applied and, the energy in each filter is summed.
+- The logarithm of all filterbank energies is taken, as we don't hear loudness in a linear scale.
+- Take the Discrete Cosine Transform (DCT) of the log filterbank energies in order to decorrelate computed energies since mel filters are all overlapping.
+
+It is easy to compute MFCC using Librosa, and they are shown in the following figure.
+
+![Image](/assets/images/mfcc.png#right)
+
 
 ## II. Audio features with Wav2Vec2
 

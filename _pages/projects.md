@@ -60,11 +60,19 @@ It is easy to compute MFCC using Librosa, and they are shown in the following fi
 
 #### I.1.2. Results and discussions
 
+#### I.1.2.1 A first implementation
+
 Firstly, I used audio files in RAVDESS dataset. For each file, I only took the first seconds in order to have feature vectors of same size, and I computed their MFCC features. MFCC features are represented in the form of a matrix where there are time windows in x-axis, and for each windows, we have MFCC features. At the end, an audio file is represented in the way of an image and therefore, it can be analyzed like an image.
 
-Many classical machine learning algorithms needd a feature vector as an input, so sometimes, the average of MFCC through time is computed and it is used to train these machine learning models. By this way, many informations are lost. It is possigle to ddo better with deep learning. In order to use these new features to feed a neural network, I choose to re-implement a model found in the literature. I clearly conclude that model overfit (even with dropout) as train score is around 0.99 while validation score is around 0.65. I was looking insights to increase the validation score: data augmentation on the same dataset, add new data sets, change the architecture of the neural network...
+Many classical machine learning algorithms need a feature vector as an input, so sometimes, the average of MFCC through time is computed and it is used to train these machine learning models. By this way, many informations are lost. It is possible to do better with deep learning. In order to use these new features to feed a neural network, I choose to re-implement a model found in the literature. I clearly conclude that model overfit (even with dropout) as train score is around 0.99 while validation score is around 0.65. Increasing *dropout* leads to underfit keeping overfitting, as it can be shown in the following figure.
 
-Think about insert an illustrative figure !
+![Image](/assets/images/val_curve1.png#right)
+
+I was looking insights to increase the validation score: data augmentation on the same dataset, add new data sets, change the architecture of the neural network...
+
+
+
+#### I.1.2.2 Analyzing with new datasets
 
 
 ## I.2. Audio features with Wav2Vec2

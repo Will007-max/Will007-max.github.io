@@ -70,10 +70,11 @@ Many classical machine learning algorithms need a feature vector as an input, so
 
 I was looking insights to increase the validation score: data augmentation on the same dataset, add new data sets, change the architecture of the neural network...
 
-
-
 #### I.1.2.2 Analyzing with new datasets
 
+I started with another dataset: Toronto emotional speech set [(TESS)](https://www.kaggle.com/ejlok1/toronto-emotional-speech-set-tess). It is little different from the previous RAVDESS as the duration of audio is mainly smaller than 2 seconds. Training the same (previous) neural network (and with large dropout probability) with only this dataset led to great performances (larger than 0.98 for both train and validation sets, even for number of epochs smaller than 35).
+
+In order to train model with several types of audio for variety and diversity, I used the both datasets.
 
 ## I.2. Audio features with Wav2Vec2
 

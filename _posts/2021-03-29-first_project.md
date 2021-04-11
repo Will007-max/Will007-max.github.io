@@ -35,6 +35,8 @@ One goal was to online deploy the project: using a web app with [Flask](https://
 
 ## II. First steps
 
+When you want to realize a state-of-the-art model dealing with natural language processing, it is obvious to search in the literature recent papers about these specific tasks. In natural language processing, we are easily conducted in papers talking about transformers...
+
 As suggested by a supervisor, I started by taking a look at all **HuggingFace** libraries where several pre-trained models (in natural language processing as well as voice processing) are available and just need to be fine-tuned with additional data. There are always many resources in other languages like German and Spanish... A main concept in HuggingFace deals with ***transformers***: it is a kind of state-of-the-art, but several others libraries are available and could always be used... As in most cases, handling new tools is still challenging, in order to start mastering it, I looked at basic examples where *transformers* are used.
 
 We need data to train machine learning models, and in order to draw the best conclusions, they must be appropriate for the current problem we want to solve. Some audio datasets are available on Kaggle, one specifically very interesting is the [Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS)](https://zenodo.org/record/1188976#.YF5hwC1Q2Rs) dataset, as it contains both audio and video recordings. So, this part could already be considered as done. Another point was to start implementing on *Google Colab* in order to leverage GPU computing; in addition, HuggingFace already contains many *Colab* notebooks to fine-tune algorithms.

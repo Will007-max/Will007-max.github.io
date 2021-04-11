@@ -16,7 +16,7 @@ Currently, I am realizing several machine learning projects, the main is focused
 
 The analysis of emotions in a video streaming can be done by exploiting two channels: audio streaming, and the image sequence. In a first step, I only focused on audio.
 
-Before the introduction of *transformers*, *MFCC coefficients* have been the state of the art in audio natural language processing. Research continues to be conducted for a better exploitation of audio to improve the applications of artificial intelligence in everyday life. Considering this point, I found it appropriate to use these two approaches to extract interesting features to feed to machine learning algorithms for prediction.
+*MFCC coefficients* have been the state of the art in audio natural language processing. Research continues to be conducted for a better exploitation of audio to improve the applications of artificial intelligence in everyday life. Considering this point, I found it appropriate to use this first approach to extract interesting features to feed to machine learning algorithms for prediction.
 
 # I. Working with audio files
 
@@ -64,18 +64,20 @@ It is easy to compute MFCC using Librosa, and they are shown in the following fi
 
 Firstly, I used audio files in [RAVDESS](https://zenodo.org/record/1188976#.YF5hwC1Q2Rs) dataset. For each file, I only took the first seconds in order to have feature vectors of same size, and I computed their MFCC features. MFCC features are represented in the form of a matrix where there are time windows in x-axis, and for each windows, we have MFCC features. At the end, an audio file is represented in the way of an image and therefore, it can be analyzed like an image.
 
-Many classical machine learning algorithms need a feature vector as an input, so sometimes, the average of MFCC through time is computed and it is used to train these machine learning models. By this way, many informations are lost. It is possible to do better with deep learning. In order to use these new features to feed a neural network, I choose to re-implement a model found in the literature. I clearly conclude that model overfit (even with dropout) as train score is around 0.99 while validation score is around 0.65. Increasing *dropout* leads to underfit (decrease of the train score to 0.8) keeping overfitting (train and validation scores remaining too separated), as it can be shown in the following figure.
+Many classical machine learning algorithms need a feature vector as an input, so sometimes, the average of MFCC through time is computed and it is used to train these machine learning models. By this way, many informations are lost. It is possible to do better with deep learning. In order to use these new features to feed a neural network, I choose to re-implement a model found in the literature.
 
-![Image](/assets/images/val_curve1.png#right)
+[comment]:<(I clearly conclude that model overfit (even with dropout) as train score is around 0.99 while validation score is around 0.65. Increasing *dropout* leads to underfit (decrease of the train score to 0.8) keeping overfitting (train and validation scores remaining too separated), as it can be shown in the following figure.)>
 
-I was looking insights to increase the validation score: data augmentation on the same dataset, add new data sets, change the architecture of the neural network...
+[comment]:<(![Image](/assets/images/val_curve1.png#right))>
 
-#### I.1.2.2 Analyzing with new datasets
+[comment]:<(I was looking insights to increase the validation score: data augmentation on the same dataset, add new data sets, change the architecture of the neural network...)>
 
-I started with another dataset: Toronto emotional speech set [(TESS)](https://www.kaggle.com/ejlok1/toronto-emotional-speech-set-tess). It is little different from the previous RAVDESS as the duration of audio is mainly smaller than 2 seconds. Training the same (previous) neural network (and with large dropout probability) with only this dataset led to great performances (larger than 0.98 for both train and validation sets, even for number of epochs smaller than 35).
+[comment]:<(#### I.1.2.2 Analyzing with new datasets)>
 
-In order to train model with several types of audio for variety and diversity, I used the both datasets, even if it may be challenging to accurately use data from different sources.
-- Using RAVDESS and TESS, with this neural network architecture, I got a training score of 0.86 and a validation score of 0.8
+[comment]: <(I started with another dataset: Toronto emotional speech set [(TESS)](https://www.kaggle.com/ejlok1/toronto-emotional-speech-set-tess). It is little different from the previous RAVDESS as the duration of audio is mainly smaller than 2 seconds. Training the same (previous) neural network (and with large dropout probability) with only this dataset led to great performances (larger than 0.98 for both train and validation sets, even for number of epochs smaller than 35))>.
+
+[comment]: <(In order to train model with several types of audio for variety and diversity, I used the both datasets, even if it may be challenging to accurately use data from different sources.)>
+[comment]: <(- Using RAVDESS and TESS, with this neural network architecture, I got a training score of 0.86 and a validation score of 0.8)>
 
 ## I.2. Audio features with Wav2Vec2
 

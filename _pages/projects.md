@@ -60,24 +60,27 @@ It is easy to compute MFCC using Librosa, and they are shown in the following fi
 
 #### I.1.2. Results and discussions
 
-#### I.1.2.1 A first implementation
+#### I.1.2.1 First implementations and first conclusions
 
 Firstly, I used audio files in [RAVDESS](https://zenodo.org/record/1188976#.YF5hwC1Q2Rs) dataset. For each file, I only took the first seconds in order to have feature vectors of same size, and I computed their MFCC features. MFCC features are represented in the form of a matrix where there are time windows in x-axis, and for each windows, we have MFCC features. At the end, an audio file is represented in the way of an image and therefore, it can be analyzed like an image.
 
 Many classical machine learning algorithms need a feature vector as an input, so sometimes, the average of MFCC through time is computed and it is used to train these machine learning models. By this way, many informations are lost. It is possible to do better with deep learning. In order to use these new features to feed a neural network, I choose to re-implement a model found in the literature.
 
-[comment]:<(I clearly conclude that model overfit (even with dropout) as train score is around 0.99 while validation score is around 0.65. Increasing *dropout* leads to underfit (decrease of the train score to 0.8) keeping overfitting (train and validation scores remaining too separated), as it can be shown in the following figure.)>
+I clearly conclude that model overfit (even with dropout) as train score is around 0.99 while validation score is around 0.65. Increasing *dropout* leads to underfit (decrease of the train score to 0.8) keeping overfitting (train and validation scores remaining too separated), as it can be shown in the following figure.
 
-[comment]:<(![Image](/assets/images/val_curve1.png#right))>
+![Image](/assets/images/val_curve1.png#right)
 
-[comment]:<(I was looking insights to increase the validation score: data augmentation on the same dataset, add new data sets, change the architecture of the neural network...)>
+I was looking insights to increase the validation score: data augmentation on the same dataset, add new data sets, change the architecture of the neural network...
 
 [comment]:<(#### I.1.2.2 Analyzing with new datasets)>
 
-[comment]: <(I started with another dataset: Toronto emotional speech set [(TESS)](https://www.kaggle.com/ejlok1/toronto-emotional-speech-set-tess). It is little different from the previous RAVDESS as the duration of audio is mainly smaller than 2 seconds. Training the same (previous) neural network (and with large dropout probability) with only this dataset led to great performances (larger than 0.98 for both train and validation sets, even for number of epochs smaller than 35))>.
+I started with another dataset: Toronto emotional speech set [(TESS)](https://www.kaggle.com/ejlok1/toronto-emotional-speech-set-tess). It is little different from the previous RAVDESS as the duration of audio is mainly smaller than 2 seconds. Training the same (previous) neural network (and with large dropout probability) with only this dataset led to great performances (larger than 0.98 for both train and validation sets, even for number of epochs smaller than 35).
 
-[comment]: <(In order to train model with several types of audio for variety and diversity, I used the both datasets, even if it may be challenging to accurately use data from different sources.)>
-[comment]: <(- Using RAVDESS and TESS, with this neural network architecture, I got a training score of 0.86 and a validation score of 0.8)>
+In order to train model with several types of audio, for variety and diversity, I used the both datasets, even if it may be challenging to accurately use data from different sources.
+
+- Using RAVDESS and TESS, with the same neural network architecture, I got a training score of 0.86 and a validation score of 0.8
+
+#### I.1.2.2. Improving processing and models
 
 ## I.2. Audio features with Wav2Vec2
 

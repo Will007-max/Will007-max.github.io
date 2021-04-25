@@ -66,6 +66,8 @@ Firstly, I used audio files in [RAVDESS](https://zenodo.org/record/1188976#.YF5h
 
 Many classical machine learning algorithms need a feature vector as an input, so sometimes, the average of MFCC through time is computed and it is used to train these machine learning models. By this way, many informations are lost. It is possible to do better with deep learning. In order to use these new features to feed a neural network, I choose to re-implement a model found in the literature.
 
+The model is a convolutional neural network whosee architecture is given in the following:
+
 I clearly conclude that model overfit (even with dropout) as train score is around 0.99 while validation score is around 0.65. Increasing *dropout* leads to underfit (decrease of the train score to 0.8) keeping overfitting (train and validation scores remaining too separated), as it can be shown in the following figure.
 
 ![Image](/assets/images/val_curve1.png#right)
@@ -85,6 +87,8 @@ In order to train model with several types of audio, for variety and diversity, 
 ## I.2. Audio features with Wav2Vec2
 
 Wav2Vec2 is a vectorized representation of audio files that is feeded to machine learning algorithms. It is similar to word2vec used for word embeddings in natural language processing. After training to learn these features, this vector supposedly carries more representation information than other types of features, these are recent advancements in audio processing.
+
+Currently, my understanding of Wav2Vec2 library for this emotion detection was limited, in addition I got good validation scores with MFCC features, so I only implemented emotion detection based on MFCC features.
 
 
 # II. Working with video files (images frames)

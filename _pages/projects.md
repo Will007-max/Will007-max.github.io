@@ -104,6 +104,28 @@ feed a neural network, I choose to re-implement a model found in the literature.
 The model is a convolutional neural network whose architecture is given in the
 following:
 
+```python
+
+def CNN_model():
+
+  model = tf.keras.models.Sequential()
+  model.add(tf.keras.layers.Conv2D(256, input_shape=(X_train.shape[1],
+                                                     X_train.shape[2], 1),
+                                   kernel_size=(4, 4),
+                                   activation='relu'))
+  model.add(tf.keras.layers.MaxPooling2D(pool_size=(4, 4)))
+  model.add(tf.keras.layers.BatchNormalization())
+  model.add(tf.keras.layers.Dropout(0.8))
+  model.add(tf.keras.layers.Flatten())
+  model.add(tf.keras.layers.Dense(64, activation='relu'))
+  model.add(tf.keras.layers.Dropout(0.2))
+  model.add(tf.keras.layers.Dense(32, activation='relu'))
+  model.add(tf.keras.layers.Dense(7, activation='softmax'))
+
+  return model
+
+```
+
 I clearly conclude that model overfit (even with dropout) as train score is
 around 0.99 while validation score is around 0.65. Increasing *dropout* leads to
 underfit (decrease of the train score to 0.8) keeping overfitting (train and
@@ -128,7 +150,7 @@ In order to train model with several types of audio, for variety and diversity,
 I used the both datasets, even if it may be challenging to accurately use data
 from different sources.
 
-- Using RAVDESS and TESS, with the same neural network architecture, I got a
+Using RAVDESS and TESS, with the same neural network architecture, I got a
 training score of 0.86 and a validation score of 0.8
 
 [comment]:<(#### I.1.2.2. Improving processing and models)>

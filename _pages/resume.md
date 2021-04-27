@@ -117,38 +117,26 @@ and resolution of complex problems, experimental physics
 
 # MOOCs
 
-- [Deep Learning Specialization, Coursera]
-(https://www.coursera.org/account/accomplishments/specialization/F7KBTVAVUYN7)
-- [Machine Learning, Coursera]
-(https://www.coursera.org/account/accomplishments/verify/3QT9RTQ9TBHR)
-- [Bayesian Methods for Machine Learning]
-(https://www.coursera.org/account/accomplishments/verify/NZMJDBSXG9WB)
-- [Bayesian Statistics: From Concept to Data Analysis, Coursera]
-(https://www.coursera.org/account/accomplishments/verify/FGYGUABEEWTC)
-- [Bayesian Statistics: Techniques and Models, Coursera]
-(https://www.coursera.org/account/accomplishments/verify/C4BBQ63X5MD9)
-- [What is Data Science ?, Coursera]
-(https://www.coursera.org/account/accomplishments/verify/FLGGCVRB36UV)
-- [The Data Scientist's Toolbox]
-(https://www.coursera.org/account/accomplishments/verify/HTG6URM66FPJ)
-- [Introduction to Statistics with R, FUN]
-(https://www.fun-mooc.fr/media/attestations/attestation_suivi_course-v1:ParisSaclay+71007+session14_504d8da6cac2ff1d2b433062bb6476a0.pdf)
-- [Fundamentals for Big Data, FUN]
-(https://www.fun-mooc.fr/media/attestations/attestation_suivi_course-v1:MinesTelecom+04006+session10_b8dbe3019f5b7e0c7068ca5a32bc581e.pdf)
-- [Deep Learning, FUN]
-(https://www.fun-mooc.fr/media/attestations/attestation_suivi_course-v1:CNAM+01031+session02_2459390e9216a4f213eb9283640448c9.pdf)
+- [Deep Learning Specialization, Coursera](https://www.coursera.org/account/accomplishments/specialization/F7KBTVAVUYN7)
+- [Machine Learning, Coursera](https://www.coursera.org/account/accomplishments/verify/3QT9RTQ9TBHR)
+- [Bayesian Methods for Machine Learning](https://www.coursera.org/account/accomplishments/verify/NZMJDBSXG9WB)
+- [Bayesian Statistics: From Concept to Data Analysis, Coursera](https://www.coursera.org/account/accomplishments/verify/FGYGUABEEWTC)
+- [Bayesian Statistics: Techniques and Models, Coursera](https://www.coursera.org/account/accomplishments/verify/C4BBQ63X5MD9)
+- [What is Data Science ?, Coursera](https://www.coursera.org/account/accomplishments/verify/FLGGCVRB36UV)
+- [The Data Scientist's Toolbox](https://www.coursera.org/account/accomplishments/verify/HTG6URM66FPJ)
+- [Introduction to Statistics with R, FUN](https://www.fun-mooc.fr/media/attestations/attestation_suivi_course-v1:ParisSaclay+71007+session14_504d8da6cac2ff1d2b433062bb6476a0.pdf)
+- [Fundamentals for Big Data, FUN](https://www.fun-mooc.fr/media/attestations/attestation_suivi_course-v1:MinesTelecom+04006+session10_b8dbe3019f5b7e0c7068ca5a32bc581e.pdf)
+- [Deep Learning, FUN](https://www.fun-mooc.fr/media/attestations/attestation_suivi_course-v1:CNAM+01031+session02_2459390e9216a4f213eb9283640448c9.pdf)
 
 # Education
 
 | Degree | University | Start date | End date |
 | --- | --- | --- | --- | --- |
-| Full stack data science | VIVADATA Paris | 01.2021 | 04.2021 |
-| Ph.D. in nanoscience | CEA - Paris-Saclay University | 10.2017 | 09.2020 |
-| [Master 2 - nanophysics]
-(http://www.nanosciences.universite-paris-saclay.fr/master-nanosciences-u-psud.jimdofree.com/index.html) | Paris-Saclay University | 09.2016 | 09.2017 |
+| Full stack data science | [VIVADATA Paris](http://vivadata.org/html/courses/) | 01.2021 | 04.2021 |
+| Ph.D. in nanoscience | [CEA - Paris-Saclay University](http://iramis.cea.fr/spec/LEPO/) | 10.2017 | 09.2020 |
+| [Master 2 - nanophysics](http://www.nanosciences.universite-paris-saclay.fr/master-nanosciences-u-psud.jimdofree.com/index.html) | Paris-Saclay University | 09.2016 | 09.2017 |
 | Master degree - material science | University of Yaounde 1 | 09.2014 | 07.2016 |
-| [Preparatory classes / Bachelor]
-(http://sciences.univ-lemans.fr/) | Le Mans Univesity | 2011 | 2014 |
+| [Preparatory classes / Bachelor](http://sciences.univ-lemans.fr/) | Le Mans Univesity | 2011 | 2014 |
 
 
 # Languages

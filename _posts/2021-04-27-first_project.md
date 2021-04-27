@@ -67,7 +67,7 @@ because I was able to handle it comfortably.
 At the very beginning, I didn't even know how to approach the problem I wanted
 to solve: I had a lot of ideas but of course I had to balance the great
 ambitions with what was actually possible to achieve... In addition, in my mind,
-it wasn't clear if considering audio it is a simple classification problem
+it wasn't clear if, considering audio, it is a simple classification problem
 (different classes for different emotions) or it was possible to deal with
 natural language processing.
 

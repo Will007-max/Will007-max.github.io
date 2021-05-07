@@ -1,6 +1,6 @@
 ---
 published: true
-title: Organizing my first ML project
+title: Organizing my first personal ML project
 #collection: ml
 layout: single
 author_profile: true

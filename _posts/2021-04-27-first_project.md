@@ -4,9 +4,7 @@ title: Organizing my first personal ML project
 #collection: ml
 layout: single
 author_profile: true
-#permalink: /projects/
 read_time: true
-categories: project
 #excerpt : "Writing"
 comments : true
 toc: true

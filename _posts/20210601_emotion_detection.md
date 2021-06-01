@@ -1,16 +1,11 @@
 ---
-published: true
-title: Organizing my first personal ML project
-#collection: ml
-layout: single
+title: Video streaming analysis to detect emotions
+layout: archive
+tilte: 'My Projects'
+permalink: /projects/
 author_profile: true
+categories: project
 read_time: true
-#categories: [machinelearning]
-#categories: machinelearning
-excerpt : "Writing"
-#header :
-    #overlay_image: "https://maelfabien.github.io/assets/images/wolf.jpg"
-    #teaser : "https://maelfabien.github.io/assets/images/wolf.jpg"
 comments : true
 toc: true
 toc_sticky: true
@@ -18,116 +13,233 @@ sidebar:
     nav: sidebar-sample
 ---
 
-<!--src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script> -->
+This project is focused on deep learning for processing audio and videos in order
+to determine emotions in communication.
 
-Here are some words about how I wrote and organized my first project.
-Who knows, it may be useful in some context. I had some ideas at the beginning,
-and they evolved with the project.
+The analysis of emotions in a video streaming can be done by exploiting two
+channels: audio streaming, and the image sequence. In a first step, I only
+focused on audio.
 
-## I. Context
+*MFCC coefficients* have been the state of the art in audio natural language
+processing. Research continues to be conducted for a better exploitation of
+audio to improve the applications of artificial intelligence in everyday life.
+Considering this point, I found it appropriate to use this approach to extract
+interesting features to feed to machine learning algorithms for prediction.
 
-Completing my data science bootcamp, I wanted to realize a great interesting
-project allowing me to develop new skills and deeply apply the majort part of
-what I learned. And, for me, what could be better than ***Deep Learning*** ? ...
-as in this context, models are trained with a large amount of data, many of them
-are already pre-trained, and we apply *transfer learning* to have great
-performances.  Based on my knowledge on some possible machine learning
-applications around us, in my project I wanted to analyze video streaming in
-order to detect and predict emotions. It could be interesting for many
-applications like security cameras, job interviews, call centers, improving the
-quality of customer service, and why not in our interactions with smart
-devices...
+# I. Working with audio files
 
-Because emotions may be expressed on faces (facial expressions), via voice tones
-and body language, a priori, this can be done by simultaneously processing video
-and audio streaming. I was wondering if this sort of project could be achieved
-within the time frame (less than a month). Basically, I have a good scientific
-background, so I can quickly learn a lot of things. But, I didn't know if it was
-enough since I never managed this kind of project, in addition it was not my
-main scientific topic (so, many things to learn from scratch).
+## I.1. MFCC features using Librosa
 
-I was even wondering where to find data to feed to my machine learning
-algorithms, and how to train them ? I meant what kind of models could be applied
-in order to have great performances. In addition, could I locally train my
-models ? or must I use cloud infrastructures and/or online notebooks and
-frameworks ? Another point was to getting started and to learn the main concepts
-to master and manage my project. One of my supervisor suggested me to simply
-start with audio processing since for a start, it might be quite challenging to
-work on both channels (audio and video).
+Many Python librairies deal with signal and audio processing, here I only talk
+about Librosa. For a better understanding, I would start by reminding some
+concepts upstream of the MFCC coefficients.
 
-One goal was to online deploy the project: using a web app with [Flask](https://flask.palletsprojects.com/), a REST API with [FastAPI](https://fastapi.tiangolo.com), [Plotly Express](https://plotly.com/python/plotly-express/) and [Dash](https://dash-gallery.plotly.host/Portal/), or even [Streamlit](https://streamlit.io)...
-indeed during the data science training, we learn some interesting ways for
-doing this kind of implementation even including Docker and Kubernetes to deploy
-on servers in the Cloud. I thought this part of my project was the easiest
-because I was able to handle it comfortably.
+### I.1.1. Audio representations
 
-## II. First steps
+#### I.1.1.1. Audio wave
 
-At the very beginning, I didn't even know how to approach the problem I wanted
-to solve: I had a lot of ideas but of course I had to balance the great
-ambitions with what was actually possible to achieve... In addition, in my mind,
-it wasn't clear if, considering audio, it is a simple classification problem
-(different classes for different emotions) or it was possible to deal with
-natural language processing.
+Sound is a mechanical wave that is transmitted from a source in an elastic
+medium. The perturbation is a local change of the atmospheric pressure causing
+the vibrations of the air molecules. Human beings and many animals feel this
+wave through the sense of hearing.
 
-For an additional complexity and without even having an indication of the data
-to work with, I chose the second option... When you want to realize a
-state-of-the-art model dealing with natural language processing, it is obvious
-to search in the literature recent papers about these specific tasks. In natural
-language processing, we are easily conducted in papers talking about
-transformers...
+Typically, an audio wave has a form as represented in the following figure,
+where the time-evolution of the perturbation amplitude is represented.
 
-As suggested by a supervisor, I started by taking a look at all **HuggingFace**
-libraries where several pre-trained models (in natural language processing as
-well as voice processing) are available and just need to be fine-tuned with
-additional data. There are always many resources in other languages like German
-and Spanish... A main concept in HuggingFace deals with ***transformers***: it
-is a kind of state-of-the-art, but several others libraries are available and
-could always be used... As in most cases, handling new tools is still
-challenging, in order to start mastering it, I looked at basic examples where *transformers* are used.
+![Image](/assets/images/audio_wave.png#right)
 
-We need data to train machine learning models, and in order to draw the best
-conclusions, they must be appropriate for the current problem we want to solve.
-Some audio datasets are available on Kaggle, one specifically very interesting
-is the [Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS)](https://zenodo.org/record/1188976#.YF5hwC1Q2Rs) dataset, as it contains both audio and
-video recordings. So, this part could already be considered as done. Another
-point was to start implementing on *Google Colab* in order to leverage GPU
-computing; in addition, HuggingFace already contains many *Colab* notebooks to
-fine-tune algorithms.
+#### I.1.1.2. Spectrogram
 
-Since I had to use *Google Colab*, I started by importing all needed files in my
-*Google Drive*. I wanted to extract features from different files in order to
-feed a machine learning model. The dataset contains many files grouped in
-folders (voice categories, actors...) and the name of each voice file contains informations: in that order there are in sequence  *modality* (01 = audio and
-video, 02 = video only, 03 = audio only), *voice channel* (01 = speech, 02 =
-song), *emotion* **(01 = neutral, 02 = calm, 03 = happy, 04 = sad, 05 = angry, 06 = fearful, 07 = disgust, 08 = surprised)**, *emotional intensity* (01 = normal, 02 = strong). For each file, it is necessary to match the extracted features with its corresponding name (path) and label, and stored all in a dataframe to ease
-future data manipulations.
+Since for audio signals, there is time-evolution of the frequencies, the
+well-known Fast Fourier transform (FFT) allows to visualize the spectrum of each
+time window, and the spectrogram is obtained when FFT is computed on overlapping
+windows of the signal.
 
-## III. HuggingFace and Librosa libraries
+A  visualisation is shown on the following figure where time is on x-axis,
+frequency on y-axis and relative intensity on the colorbar.
 
-My first research about *transformers* applied to audio led me to automatic
-speech recognition (ASR). A library dealing with audio files is Wav2Vec, it is
-similar to Word2Vec which is used for word embeddings:
-*meaningful embeddings (vectors) are learned from raw data* (audio or text).
+![Image](/assets/images/spectrogram.png#right)
 
-It is usually established that emotion detection in speech may be done through
-linguistics (words are used for semantics) and/or paralinguistics (acoustic
-waves from audio).
+Spectrogram is a way to process audio data in order to extract interesting
+features, but for this project I used Mel Frequency Cepstral Coefficients (MFCC)
+taking into account human perception for sensitivity at frequencies.
 
-Talking about transformers, in the case of speech emotion recognition, we can
-ask to ourselves if the trained *contextual* representations of raw audio
-(obtained from Wav2Vec for instance) also contain emotional content. To answer
-this question, it might be interesting to compare performance resulting of the
-use of these representations to performance with other descriptors like the
-spectrogram features or Mel-Frequency Cepstral Coefficients (MFCC) following
-Fourier analysis of the audio file in the frequency domain (using Librosa for
-instance).
+#### I.1.1.3. MFCC features
 
-As the project progressed, I realized that transformers were not really adapted
-to solve my problem. Indeed, the used dataset consists of one or two sentences
-that are pronounced in different ways (depending on the emotion) by several
-actors. It is therefore the acoustic features that allow to make the difference
-between the emotions. From what I have learnt about transformers, they rely on
-the text itself (its content) to perform different tasks rather than acoustic
-features...
+MFCC are widely used features for audio and speech recognition, and have been
+the state-of-the-art ever since as they represent the shape of the vocal tract.
+Following are steps to get insight of how they are computed:
+
+- The audio signal is divided into short frames (20 - 40 ms).
+- For each frame, the periodogram (Fast Fourier Transform) estimate of the power
+spectrum is computed.
+- In order to consider our human sensitivity of frequencies, the mel filterbank
+to the power spectra is applied and, the energy in each filter is summed.
+- The logarithm of all filterbank energies is taken, as we don't hear loudness
+in a linear scale.
+- Take the Discrete Cosine Transform (DCT) of the log filterbank energies in
+order to decorrelate computed energies since mel filters are all overlapping.
+
+It is easy to compute MFCC using Librosa, and they are shown in the following
+figure where time is on the x-axis.
+
+![Image](/assets/images/mfcc.png#right)
+
+#### I.1.2. Results and discussions
+
+[comment]:<(#### I.1.2.1 First implementations and first conclusions)>
+
+Firstly, I used audio files in [RAVDESS](https://zenodo.org/record/1188976#.YF5hwC1Q2Rs) dataset. For each file, I only took the first seconds in order to have feature
+vectors of same size, and I computed their MFCC features. MFCC features are
+represented in the form of a matrix where there are time windows in x-axis, and
+for each windows, we have MFCC features. At the end, an audio file is
+represented in the way of an image and therefore, it can be analyzed like an
+image.
+
+Many classical machine learning algorithms need a feature vector as an input, so sometimes, the average of MFCC through time is computed and it is used to train
+these machine learning models. By this way, many informations are lost. It is
+possible to do better with deep learning. In order to use these new features to
+feed a neural network, I choose to re-implement a model found in the literature.
+
+The model is a convolutional neural network whose architecture is given in the
+following:
+
+```python
+
+def CNN_model():
+
+  model = tf.keras.models.Sequential()
+  model.add(tf.keras.layers.Conv2D(256, input_shape=(X_train.shape[1],
+                                                     X_train.shape[2], 1),
+                                   kernel_size=(4, 4),
+                                   activation='relu'))
+  model.add(tf.keras.layers.MaxPooling2D(pool_size=(4, 4)))
+  model.add(tf.keras.layers.BatchNormalization())
+  model.add(tf.keras.layers.Dropout(0.8))
+  model.add(tf.keras.layers.Flatten())
+  model.add(tf.keras.layers.Dense(64, activation='relu'))
+  model.add(tf.keras.layers.Dropout(0.2))
+  model.add(tf.keras.layers.Dense(32, activation='relu'))
+  model.add(tf.keras.layers.Dense(8, activation='softmax'))
+
+  return model
+
+```
+
+I clearly conclude that model overfit (even with dropout) as train score is
+around 0.99 while validation score is around 0.65. Increasing *dropout* leads to
+underfit (decrease of the train score to 0.8) keeping overfitting (train and
+validation scores remaining too separated), as it can be shown in the
+following figure.
+
+[comment]:<(![Image](/assets/images/val_curve1.png#right))>
+
+I was looking insights to increase the validation score: data augmentation on
+the same dataset, add new data sets, change the architecture of the neural
+network...
+
+[comment]:<(#### I.1.2.2 Analyzing with new datasets)>
+
+I started with another dataset: Toronto emotional speech set [(TESS)](https://www.kaggle.com/ejlok1/toronto-emotional-speech-set-tess). It is little different
+from the previous RAVDESS as the duration of audio is mainly smaller than 2
+seconds. Training the same (previous) neural network (and with large dropout
+probability) with only this dataset led to great performances (larger than 0.98
+for both train and validation sets, even for number of epochs smaller than 35).
+
+In order to train model with several types of audio, for variety and diversity,
+I used the both datasets, even if it may be challenging to accurately use data
+from different sources.
+
+Using RAVDESS and TESS, with the same neural network architecture, I got a
+training score of 0.86 and a validation score of 0.8
+
+[comment]:<(#### I.1.2.2. Improving processing and models)>
+
+## I.2. Audio features with Wav2Vec2
+
+Wav2Vec2 is a vectorized representation of audio files that is feeded to machine
+learning algorithms. It is similar to word2vec used for word embeddings in
+natural language processing. After training to learn these features, this vector supposedly carries more representation information than other types of features,
+these are recent advancements in audio processing.
+
+Currently, my understanding of Wav2Vec2 library for this emotion detection was
+limited, in addition I got good validation scores with MFCC features, so I only implemented emotion detection based on MFCC features.
+
+
+# II. Working with video files (images frames)
+
+A video is a succession of several images recorded with a frame rate (generally
+larger than 20 frames/s). The analysis of a video streaming relies on the analysis
+of those different images.
+
+In order to preprocess "videos" before feeding to deep learning models, I make
+some steps:
+
+- I only take one frame because I could consider that during the two seconds of
+recording, the emotion state of the person doesn't change.
+- Then I use a first algorithm for face detection to only detect face on the
+image and to crop the image around the detected face.
+- The size of the new image is also rescaled and transformed to a grayscaled  
+image to disable the possible race bias.
+- The image is fed to a pre-trained VGG16-based CNN as in the following:
+
+```python
+
+vgg_model = VGG16(include_top=False, weights='imagenet', input_shape=(224, 224, 3))
+
+for layer in vgg_model.layers:
+  layer.trainable = False
+
+x = vgg_model.output
+x = Flatten()(x)
+x = Dense(512, activation='relu')(x)
+#x = Dropout(0.5)(x)
+x = Dense(256, acctivation='relu')(x)
+x = Dense(8, activation='softmax')(x)
+
+transfer_model = Model(inputs=vgg_model, outputs=x)
+
+```
+
+Train and validation scores are great, 0.9947 and 0.9358 respectively, so I
+suppose no need to a very spend long time for fine tuning hyperparameters.
+
+# III. The app
+
+I planned to realize a web app to be used and tested by any user.
+
+Considering my knowledge and the desired features of the app, Streamlit has been
+my choice to build the app. The overview of the app is as following:
+
+![Image](/assets/images/streamlit_emotion.png#right)
+
+During the implementation of the app, I face several difficulties:
+
+- I have to be able to simultaneously record audio and video streaming of the
+user, and use the both channels to make predictions of the emotional state.
+
+- Locally, when I test the app, the predictions seem to be random for both audio
+and video. I realize that the training data is not very representative of the
+global population. The problem should be considered for different types of people,
+use the appropriate data for the people to study.
+
+- Considering all that, I hypothesize that for real-world use, one should not
+necessarily rely on only the validation scores, but have a thorough idea of what
+the algorithm is based on to make the classification. This could avoid many biases
+present in the datasets.
+
+Despite the poor predictions in real conditions, I tried to deploy the application
+so that it could be used by anyone. So I tried several solutions, but currently,
+the operational constraints and my knowledges did not allow me to succeed:
+
+- I had used Streamlit because it allowed me to record the user's video and
+audio stream, because I don't know of any other frameworks that allow me to do this.
+
+- I had to train a relatively large model (based on VGG) which made it impossible
+to deploy it via Streamlit. Also, the deployment platforms don't really like the
+audio and video recording feature present in the app, so I get error messages
+when I try to deploy with Heroku as well.
+
+- I also containerized the model with Docker and tried to install additional
+libraries needed for Linux OS systems. The application starts correctly
+(after all that) but at the end there are still error messages.

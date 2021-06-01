@@ -6,7 +6,7 @@ layout: single
 author_profile: true
 read_time: true
 #categories: [machinelearning]
-#categories: machinelearning
+categories: project
 excerpt : "Writing"
 #header :
     #overlay_image: "https://maelfabien.github.io/assets/images/wolf.jpg"

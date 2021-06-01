@@ -2,7 +2,7 @@
 title: Video streaming analysis to detect emotions
 layout: archive
 tilte: 'My Projects'
-permalink: /projects/
+#permalink: /projects/
 author_profile: true
 categories: project
 read_time: true

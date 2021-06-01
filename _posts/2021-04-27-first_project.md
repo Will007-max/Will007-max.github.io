@@ -5,7 +5,7 @@ title: Organizing my first personal ML project
 layout: single
 author_profile: true
 read_time: true
-categories: project
+#categories: project
 excerpt : "Writing"
 #header :
     #overlay_image: "https://maelfabien.github.io/assets/images/wolf.jpg"

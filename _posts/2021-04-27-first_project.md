@@ -4,18 +4,17 @@ title: Organizing my first personal ML project
 #collection: ml
 layout: single
 author_profile: true
+permalink: /projects/
 read_time: true
 categories: project
-excerpt : "Writing"
-#header :
-    #overlay_image: "https://maelfabien.github.io/assets/images/wolf.jpg"
-    #teaser : "https://maelfabien.github.io/assets/images/wolf.jpg"
+#excerpt : "Writing"
 comments : true
 toc: true
 toc_sticky: true
 sidebar:
     nav: sidebar-sample
 ---
+
 
 <!--src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script> -->

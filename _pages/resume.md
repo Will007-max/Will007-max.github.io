@@ -2,8 +2,8 @@
 layout: archive
 permalink: /resume/
 author_profile: true
-redirect_from:
-  - /resume
+#redirect_from:
+#  - /resume
 classes: wide
 toc_sticky: true
 ---

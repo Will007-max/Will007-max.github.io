@@ -120,7 +120,7 @@ def CNN_model():
   model.add(tf.keras.layers.Dense(64, activation='relu'))
   model.add(tf.keras.layers.Dropout(0.2))
   model.add(tf.keras.layers.Dense(32, activation='relu'))
-  model.add(tf.keras.layers.Dense(7, activation='softmax'))
+  model.add(tf.keras.layers.Dense(8, activation='softmax'))
 
   return model
 
@@ -167,3 +167,36 @@ limited, in addition I got good validation scores with MFCC features, so I only 
 
 
 # II. Working with video files (images frames)
+
+A video is a succession of several images recorded with a frame rate (generally
+larger than 20 frames/s). The analysis of a video streaming relies on the analysis
+of those different images.
+
+In order to preprocess "videos" before feeding to deep learning models, I make
+some steps:
+
+- I only take one frame because I could consider that during the two seconds of
+recording, the emotion state of the person doesn't change.
+- Then I use a first algorithm for face detection to only detect face on the
+image and to crop the image around the detected face.
+- The size of the new image is also rescaled and transformed to a grayscaled  
+image to disable the possible race bias.
+- The image is fed to a pre-trained VGG16-based CNN as in the following:
+
+```python
+
+vgg_model = VGG16(include_top=False, weights='imagenet', input_shape=(224, 224, 3))
+
+for layer in vgg_model.layers:
+  layer.trainable = False
+
+x = vgg_model.output
+x = Flatten()(x)
+x = Dense(512, activation='relu')(x)
+#x = Dropout(0.5)(x)
+x = Dense(256, acctivation='relu')(x)
+x = Dense(8, activation='softmax')(x)
+
+transfer_model = Model(inputs=vgg_model, outputs=x)
+
+```

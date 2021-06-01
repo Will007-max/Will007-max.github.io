@@ -200,3 +200,32 @@ x = Dense(8, activation='softmax')(x)
 transfer_model = Model(inputs=vgg_model, outputs=x)
 
 ```
+
+Train and validation scores are great, 0.9947 and 0.9358 respectively, so I
+suppose no need to a very spend long time for fine tuning hyperparameters.
+
+#III. The app
+
+I planned to realize a web app to be used and tested by any user.
+
+Considering my knowledge and the desired features of the app, Streamlit has been
+my choice to build the app. The overview of the app is as following:
+
+![Image](/assets/images/streamlit_emotion.png#right)
+
+During the implementation of the app, I face several difficulties:
+
+- I have to be able to simultaneously record audio and video streaming of the
+user, and use the both channels to make predictions of the emotional state.
+
+- Locally, when I test the app, the predictions seem to be random for both audio
+and video. I realize that the training data is not very representative of the
+global population. The problem should be considered for different types of people,
+use the appropriate data for the people to study.
+
+- Considering all that, I hypothesize that for real-world use, one should not
+necessarily rely on only the validation scores, but have a thorough idea of what
+the algorithm is based on to make the classification. This could avoid many biases
+present in the datasets.
+
+-

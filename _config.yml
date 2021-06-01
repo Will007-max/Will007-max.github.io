@@ -96,7 +96,7 @@ analytics:
 author:
   name             : "William Tapi"
   avatar           : "/assets/images/william_photo.jpg" #path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Data scientist, Machine learning engineer."
+  bio              : "Scientist, Data scientist"
   location         : "Paris"
   email            :
   links:

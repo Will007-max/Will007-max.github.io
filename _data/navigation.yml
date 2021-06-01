@@ -4,8 +4,8 @@ main:
     #url: https://will007-max.github.io
   - title: "My Projects"
     url: /projects
-  - title: "ML Documents"
-    url: https://will007-max.github.io
+  - title: "Tech Blog"
+    url: /tech_blog
   - title: "CV"
     url: /resume
   # - title: "Sitemap"

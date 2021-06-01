@@ -5,7 +5,6 @@ title: Organizing my first personal ML project
 layout: single
 author_profile: true
 read_time: true
-#categories: [machinelearning]
 categories: project
 excerpt : "Writing"
 #header :

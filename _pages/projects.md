@@ -204,7 +204,7 @@ transfer_model = Model(inputs=vgg_model, outputs=x)
 Train and validation scores are great, 0.9947 and 0.9358 respectively, so I
 suppose no need to a very spend long time for fine tuning hyperparameters.
 
-#III. The app
+# III. The app
 
 I planned to realize a web app to be used and tested by any user.
 
@@ -228,4 +228,18 @@ necessarily rely on only the validation scores, but have a thorough idea of what
 the algorithm is based on to make the classification. This could avoid many biases
 present in the datasets.
 
--
+Despite the poor predictions in real conditions, I tried to deploy the application
+so that it could be used by anyone. So I tried several solutions, but currently,
+the operational constraints and my knowledges did not allow me to succeed:
+
+- I had used Streamlit because it allowed me to record the user's video and
+audio stream, because I don't know of any other frameworks that allow me to do this.
+
+- I had to train a relatively large model (based on VGG) which made it impossible
+to deploy it via Streamlit. Also, the deployment platforms don't really like the
+audio and video recording feature present in the app, so I get error messages
+when I try to deploy with Heroku as well.
+
+- I also containerized the model with Docker and tried to install additional
+libraries needed for Linux OS systems. The application starts correctly
+(after all that) but at the end there are still error messages.

@@ -1,5 +1,6 @@
 ---
 layout: archive
+title: Several data tools and concepts
 permalink: /tech_blog/
 author_profile: true
 redirect_from:

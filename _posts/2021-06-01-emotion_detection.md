@@ -1,7 +1,6 @@
 ---
 title: Video streaming analysis to detect emotions
 layout: archive
-tilte: 'My Projects'
 header:
     teaser: /assets/images/streamlit_emotion.png
 author_profile: true

@@ -2,7 +2,7 @@
 main:
   #- title: "My Blog"
     #url: https://will007-max.github.io
-  - title: "My Projects"
+  - title: "Some Projects"
     url: /projects
   - title: "Tech Blog"
     url: /tech_blog

@@ -1,5 +1,5 @@
 ---
-published: true
+#published: true
 title: Organizing my first personal ML project
 #collection: ml
 layout: single

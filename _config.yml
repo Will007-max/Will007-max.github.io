@@ -21,7 +21,7 @@ title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "William Tapi"
 description              : "Welcome"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://will007-max.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "Will007-max/Will007-max.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "assets/images/william_phot.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -114,7 +114,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/Will007-max"
+      url: "https://github.com/Will-7s"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -133,7 +133,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/Will007-max"
+      url: "https://github.com/Will-7s"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:

@@ -53,7 +53,7 @@ Some tricks...
 - Machine learning algorithms are found in **pyspark.mllib.regresion**,
 **pyspark.mllib.classification** and **pyspark.mllib.clustering**
 
-- Before the training of your algorithm in MLlib, you need to create a **vector**
+- When working with supervised algorithms, MLlib expects a column of features. So, before the training of your algorithm in MLlib, you need to create a **vector**
 **representation** of the features that you'll use, as in the following:
 
 ```python

@@ -59,5 +59,9 @@ shuffle (between two stages) to transfer data through the network across the par
 job = ensemble of stages
 
 1 action = 1 job
+
 By default, there is only 1 stage / job
+
 1 "wide" transformation = 1 new stage
+
+The number of tasks depends on how Spark has been parallelized, and it is data driven.

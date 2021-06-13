@@ -65,3 +65,18 @@ By default, there is only 1 stage / job
 1 "wide" transformation = 1 new stage
 
 The number of tasks depends on how Spark has been parallelized, and it is data driven.
+
+Driver and cluster manager: spark-submit
+
+```python
+spark-submit
+    <span style="color:blue">
+    --master yarn
+    --deploy-mode client
+    </span>
+    --num-executors 2
+    --executor-cores 4
+    --executor-memory 8G
+    --class Myclass
+    mypackage.jar
+```

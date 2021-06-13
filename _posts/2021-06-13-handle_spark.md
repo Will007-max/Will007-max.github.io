@@ -79,3 +79,8 @@ spark-submit # to create a configuration to pass to the cluster manager
     --class Myclass # the class to be executed i.e. the programm start
     mypackage.jar
 ```
+
+## 4. Monitoring
+
+The question here is how I know what's going on in Spark. For this purpose,
+there are three systems available: *logging*, *event history*, *metrics*.

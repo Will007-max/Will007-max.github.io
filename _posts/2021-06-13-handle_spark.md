@@ -27,7 +27,7 @@ sequence but is distributed over the machines. As you may know, there are two ty
 *collect* (a table), *saveAsTextFile* (a file), *reduce* (a single value), *take*,
 *count*, *foreach*... and at the end, there is something new that is no longer a RDD.
 
-```scala
+```
 
 sc.textFile("wikipedia")
   .flatMap(line => line.split(" "))
@@ -35,7 +35,7 @@ sc.textFile("wikipedia")
   .reduceByKey(_ + _)
   .saveAsTextFile("wordcount")
 
-``
+```
 
 - **Dataframes** that have been introduced with SQL, and structured with columns. It is
 always a sequence but here it is a sequence of *Map[String, Any]* where we have a column name associated with a value. From an API point of view, things are a little big diffrent compared with a RDD: here, the data are structured in columns, and to make operations here we use the functions and SQL.

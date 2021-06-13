@@ -50,33 +50,30 @@ wordCountDF = wordDF.groupBy("word").count()
 
 ## 3. Execution model
 
-In Scala, once launched the program, everything starts with a driver, it is the process that monitor calculations. The driver needs to...
-
-tasks (processing units) for executors
-stage = ensemble of tasks that must be parallelized (distributed), simultaneously executed
-...
-shuffle (between two stages) to transfer data through the network across the partitions.
-job = ensemble of stages
-
-1 action = 1 job
-
-By default, there is only 1 stage / job
-
-1 "wide" transformation = 1 new stage
+In Scala, once launched the program, everything starts with a driver, it is the process that monitor calculations. Some words about the vocabular related to the execution model.
+- Tasks are processing units for executors.
+- A stage is an ensemble of tasks that must be parallelized (distributed) and simultaneously executed.
+- Shuffle is between two stages to transfer data through the network across the partitions.
+- A job is an ensemble of stages
+- Very often, an action is one job
+- By default, there is only 1 stage / job
+- 1 *"wide"* transformation = 1 new stage
 
 The number of tasks depends on how Spark has been parallelized, and it is data driven.
 
-Driver and cluster manager: spark-submit
+**Driver and cluster manager:** *spark-submit* from any machine (inside or outside the cluster),
+or *Spark shell*
 
 ```python
-spark-submit
-    <span style="color:blue">
-    --master yarn
-    --deploy-mode client
-    </span>
+spark-submit # to create a configuration to pass to the cluster manager
+    --master yarn # the most frequent case, the cluster type
+    --deploy-mode client # the deployment mode: either client or cluster
+              # in the client mode, the driver is not inside the cluster
+              # The application master communicates with YARN whereas the driver masters the executors
+              # the how many ressources to do a job, else default parameters
     --num-executors 2
     --executor-cores 4
     --executor-memory 8G
-    --class Myclass
+    --class Myclass # the class to be executed i.e. the programm start
     mypackage.jar
 ```

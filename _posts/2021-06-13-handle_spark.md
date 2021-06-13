@@ -50,7 +50,7 @@ wordCountDF = wordDF.groupBy("word").count()
 
 ## 3. Execution model
 
-In Scala, once launched the program, everything starts with a driver, it is the process that monitor calculations.
+In Scala, once launched the program, everything starts with a driver, it is the process that monitors calculations by the executors.
 
 Some words about the vocabular related to the execution model.
 - Tasks are processing units for executors.
@@ -68,7 +68,7 @@ or *Spark shell*
 
 ```python
 spark-submit # to create a configuration to pass to the cluster manager
-    --master yarn # the most frequent case, the cluster type
+    --master yarn # it is the most frequent case, here the cluster type
     --deploy-mode client # the deployment mode: either client or cluster
               # in the client mode, the driver is not inside the cluster
               # The application master communicates with YARN whereas the driver masters the executors

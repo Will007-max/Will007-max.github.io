@@ -50,7 +50,9 @@ wordCountDF = wordDF.groupBy("word").count()
 
 ## 3. Execution model
 
-In Scala, once launched the program, everything starts with a driver, it is the process that monitor calculations. Some words about the vocabular related to the execution model.
+In Scala, once launched the program, everything starts with a driver, it is the process that monitor calculations.
+
+Some words about the vocabular related to the execution model.
 - Tasks are processing units for executors.
 - A stage is an ensemble of tasks that must be parallelized (distributed) and simultaneously executed.
 - Shuffle is between two stages to transfer data through the network across the partitions.

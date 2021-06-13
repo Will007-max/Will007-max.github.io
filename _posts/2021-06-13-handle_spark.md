@@ -23,9 +23,7 @@ First, we will talk about the **Spark APIs**. Then, there is the **execution mod
 When working with Spark, there are 3 possible API:
 
 - **RDD (Resilient Distributed Datasets)** that has been firstly created. It is like a
-sequence but is distributed over the machines. As you may know, there are two types of operations that can be performed on a RDD: transformations and actions. On the one hand, transformations "transform" a RDD to another one; there are **narrow** transformations where there is no need to re-mix the data (eg: map, flapMap, filter, union...), and **wide** transformations needing synchronization, and where all the values of the same key have to be mixed on all the possible partitions (eg: distinct, groupByKey, reduceByKey, join...). On the other hand, actions transform a RDD to something else: an action may be
-*collect* (a table), *saveAsTextFile* (a file), *reduce* (a single value), *take*,
-*count*, *foreach*... and at the end, there is something new that is no longer a RDD.
+sequence but is distributed over the machines. As you may know, there are two types of operations that can be performed on a RDD: transformations and actions. On the one hand, transformations "transform" a RDD to another one; there are **narrow** transformations where there is no need to re-mix the data (eg: map, flapMap, filter, union...), and **wide** transformations needing synchronization (shuffle), and where all the values of the same key have to be mixed on all the possible partitions (eg: distinct, groupByKey, reduceByKey, join...). On the other hand, actions transform a RDD to something else: an action may be *collect* (a table), *saveAsTextFile* (a file), *reduce* (a single value), *take*, *count*, *foreach*... and at the end, there is something new that is no longer a RDD.
 
 ```python
 sc.textFile("wikipedia")
@@ -35,8 +33,7 @@ sc.textFile("wikipedia")
   .saveAsTextFile("wordcount")
 ```
 
-- **Dataframes** that have been introduced with SQL, and structured with columns. It is
-always a sequence but here it is a sequence of *Map[String, Any]* where we have a column name associated with a value. From an API point of view, things are a little big diffrent compared with a RDD: here, the data are structured in columns, and to make operations here we use the functions and SQL.
+- **Dataframes** that have been introduced with Spark SQL, and structured with columns. It is always a sequence but here it is a sequence of *Map[String, Any]* where we have a column name associated with a value. From an API point of view, things are a little big diffrent compared with a RDD: here, the data are structured in columns, and to make operations here we use the functions and SQL.
 
 ```python
 import spark.implicits._
@@ -48,4 +45,19 @@ wordDF = wordsDF.select(explode(wordsDF("words")).alias("word")) # a DataFrame w
 wordCountDF = wordDF.groupBy("word").count()
 ```
 
-- Datasets (the last one)
+- **Datasets** that are the last one created. They are sequence like RDD, and DataFrame is now a special type of Dataset.
+
+
+## 3. Execution model
+
+In Scala, once launched the program, everything starts with a driver, it is the process that monitor calculations. The driver needs to...
+
+tasks (processing units) for executors
+stage = ensemble of tasks that must be parallelized (distributed), simultaneously executed
+...
+shuffle (between two stages) to transfer data through the network across the partitions.
+job = ensemble of stages
+
+1 action = 1 job
+By default, there is only 1 stage / job
+1 "wide" transformation = 1 new stage

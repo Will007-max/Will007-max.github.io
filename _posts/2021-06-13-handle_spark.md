@@ -27,14 +27,12 @@ sequence but is distributed over the machines. As you may know, there are two ty
 *collect* (a table), *saveAsTextFile* (a file), *reduce* (a single value), *take*,
 *count*, *foreach*... and at the end, there is something new that is no longer a RDD.
 
-```
-
+```python
 sc.textFile("wikipedia")
   .flatMap(line => line.split(" "))
   .map(word => (word, 1))
   .reduceByKey(_ + _)
   .saveAsTextFile("wordcount")
-
 ```
 
 - **Dataframes** that have been introduced with SQL, and structured with columns. It is
@@ -44,10 +42,10 @@ always a sequence but here it is a sequence of *Map[String, Any]* where we have 
 import spark.implicits._
 import org.apache.spark.sql.functions._
 
-spark.read.parquet("wikipedia")
-    .groupBy("word")
-    .count()
-    .save.parquet("wordcount")
+df = sqlContext.read.text("wikipedia") # to create a new DataFrame with words column
+wordsDF = df.select(split(df("value"), " ").alias("words")) # equivalent of using flatMap() method on RDD
+wordDF = wordsDF.select(explode(wordsDF("words")).alias("word")) # a DataFrame with each line containing single word in the file
+wordCountDF = wordDF.groupBy("word").count()
 ```
 
 - Datasets (the last one)

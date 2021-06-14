@@ -1,5 +1,5 @@
 ---
-title: Handle Spark
+title: Handle Spark (writing in progress...)
 layout: single
 header:
     teaser: /assets/images/spark_cluster_mode.jpg

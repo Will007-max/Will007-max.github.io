@@ -106,6 +106,6 @@ In the client mode, the driver logs are stored in the local machine, not in the 
 
 ### 4.2. Event history
 
-This is more interesting than logging. In fact, during calculations, the executors permanently communicate with the driver *scheduler* that takes a lot of events used by several components through the *Magic Bus* of events, in particular the **Web UI** is a client for those events (for **jobs in progress**). Another client is the **EventLog Listener** that writes events on the disk (HDFS, S3), and the *Spark History Server* process will allow to read what happened on an **finished job**.
+This is more interesting than logging. In fact, during calculations, the executors permanently communicate with the driver *scheduler* that takes a lot of events used by several components through the *Magic Bus* of events, in particular the **Web UI** is a client for those events (for **jobs in progress**). Another client is the **EventLog Listener** that writes events on the disk (HDFS, S3), and the *Spark History Server* process will allow to read what happened on a **finished job**.
 
 Events are stored in JSON files, allowing further processing.

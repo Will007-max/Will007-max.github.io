@@ -98,3 +98,14 @@ In the cluster mode, the application master (inside the cluster) is started by t
 
 The question here is how I know what's going on in Spark. For this purpose,
 there are three systems available: *logging*, *event history*, *metrics*.
+
+### 4.1. Logging
+
+Logs files are written on the local disks of machines.
+In the client mode, the driver logs are stored in the local machine, not in the cluster, and that is not practical in a production context.
+
+### 4.2. Event history
+
+This is more interesting than logging. In fact, during calculations, the executors permanently communicate with the driver *scheduler* that takes a lot of events used by several components through the *Magic Bus* of events, in particular the **Web UI** is a client for those events (for **jobs in progress**). Another client is the **EventLog Listener** that writes events on the disk (HDFS, S3), and the *Spark History Server* process will allow to read what happened on an **finished job**.
+
+Events are stored in JSON files, allowing further processing.

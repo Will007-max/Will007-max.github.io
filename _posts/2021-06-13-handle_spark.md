@@ -86,7 +86,7 @@ When executed from any machine (inside or outside the cluster depending on the d
 
 ![Image](/assets/images/spark_client_mode.jpg#left)
 
-In the client mode, the driver is not inside the cluster and resides on the local machine, the application master (inside the cluster) acts as the executors launcher, and the executors are mastered by the driver outside the cluster on the local machine.
+In the client mode, the driver is not inside the cluster and resides on the local machine, the application master (started by the cluster manager) just acts as the executors launcher, and the executors are mastered by the driver outside the cluster on the local machine.
 
 ### 3.4. Cluster mode
 

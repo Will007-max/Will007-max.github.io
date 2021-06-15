@@ -65,19 +65,12 @@ Some words about the vocabular related to the execution model.
 
 The number of tasks depends on how Spark has been parallelized, and it is data driven.
 
-### 3.2. **Driver and cluster manager:** *Spark shell* vs *spark-submit*
-
-When executed from any machine (inside or outside the cluster depending on the deployment mode), the configuration is created, the resources are deployed, and the driver is launched. This is illustrated on the following figures for ***client mode*** and ***cluster mode***.
-
-![Image](/assets/images/spark_client_mode.jpg#left)
-![Image](/assets/images/spark_cluster_mode.jpg#right)
+### 3.2. Driver and cluster manager: *Spark shell* vs *spark-submit*
 
 ```python
 spark-submit # to create a configuration to pass to the cluster manager
     --master yarn # it is the most frequent case, here the cluster type
     --deploy-mode client # the deployment mode: either client or cluster
-              # in the client mode, the driver is not inside the cluster
-              # The application master communicates with YARN whereas the driver masters the executors
 
               # the how many ressources to do a job, else default parameters
     --num-executors 2
@@ -86,6 +79,16 @@ spark-submit # to create a configuration to pass to the cluster manager
     --class Myclass # the class to be executed i.e. the programm start
     mypackage.jar
 ```
+
+When executed from any machine (inside or outside the cluster depending on the deployment mode), the configuration is created, the resources are deployed, and the driver is launched. This is illustrated on the following figures for ***client mode*** and ***cluster mode***.
+
+![Image](/assets/images/spark_client_mode.jpg#left)
+
+In the client mode, the driver is not inside the cluster and resides on the local machine, the application master (inside the cluster) acts as the executors launcher, and the executors are mastered by the driver outside the cluster on the local machine.
+
+![Image](/assets/images/spark_cluster_mode.jpg#right)
+
+In the cluster mode, the application master (inside the cluster) is started by the cluster manager, and this application master starts the driver that will master the executors.
 
 ## 4. Monitoring
 

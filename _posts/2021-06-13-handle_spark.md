@@ -65,7 +65,7 @@ Some words about the vocabular related to the execution model.
 
 The number of tasks depends on how Spark has been parallelized, and it is data driven.
 
-### 3.2. Driver and cluster manager: *Spark shell* vs *spark-submit*
+### 3.2. Driver and cluster manager: *Spark shell* or *spark-submit*
 
 ```python
 spark-submit # to create a configuration to pass to the cluster manager

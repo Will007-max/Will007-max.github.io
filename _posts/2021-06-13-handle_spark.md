@@ -52,6 +52,8 @@ wordCountDF = wordDF.groupBy("word").count()
 
 In Scala, once launched the program, everything starts with a driver, it is the process that monitors calculations by the executors.
 
+### 3.1. Some notions
+
 Some words about the vocabular related to the execution model.
 - Tasks are processing units for executors.
 - A stage is an ensemble of tasks that must be parallelized (distributed) and simultaneously executed.
@@ -63,10 +65,12 @@ Some words about the vocabular related to the execution model.
 
 The number of tasks depends on how Spark has been parallelized, and it is data driven.
 
-**Driver and cluster manager:** *Spark shell* vs *spark-submit*
+### 3.2. **Driver and cluster manager:** *Spark shell* vs *spark-submit*
+
 When executed from any machine (inside or outside the cluster depending on the deployment mode), the configuration is created, the resources are deployed, and the driver is launched. This is illustrated on the following figures for ***client mode*** and ***cluster mode***.
 
-![Image](/assets/images/spark_client_mode.jpg#left) ![Image](/assets/images/spark_cluster_mode.jpg#right)
+![Image](/assets/images/spark_client_mode.jpg#left)
+![Image](/assets/images/spark_cluster_mode.jpg#right)
 
 ```python
 spark-submit # to create a configuration to pass to the cluster manager

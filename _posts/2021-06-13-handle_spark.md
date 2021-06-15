@@ -63,8 +63,10 @@ Some words about the vocabular related to the execution model.
 
 The number of tasks depends on how Spark has been parallelized, and it is data driven.
 
-**Driver and cluster manager:** *spark-submit* from any machine (inside or outside the cluster),
-or *Spark shell*
+**Driver and cluster manager:** *Spark shell* vs *spark-submit*
+When executed from any machine (inside or outside the cluster depending on the deployment mode), the configuration is created, the resources are deployed, and the driver is launched. This is illustrated on the following figures for ***client mode*** and ***cluster mode***.
+
+![Image](/assets/images/spark_client_mode.jpg#left) ![Image](/assets/images/spark_cluster_mode.jpg#right)
 
 ```python
 spark-submit # to create a configuration to pass to the cluster manager
@@ -72,6 +74,7 @@ spark-submit # to create a configuration to pass to the cluster manager
     --deploy-mode client # the deployment mode: either client or cluster
               # in the client mode, the driver is not inside the cluster
               # The application master communicates with YARN whereas the driver masters the executors
+
               # the how many ressources to do a job, else default parameters
     --num-executors 2
     --executor-cores 4

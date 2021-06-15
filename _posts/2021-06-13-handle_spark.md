@@ -82,9 +82,13 @@ spark-submit # to create a configuration to pass to the cluster manager
 
 When executed from any machine (inside or outside the cluster depending on the deployment mode), the configuration is created, the resources are deployed, and the driver is launched. This is illustrated on the following figures for ***client mode*** and ***cluster mode***.
 
+### 3.3. Client mode
+
 ![Image](/assets/images/spark_client_mode.jpg#left)
 
 In the client mode, the driver is not inside the cluster and resides on the local machine, the application master (inside the cluster) acts as the executors launcher, and the executors are mastered by the driver outside the cluster on the local machine.
+
+### 3.4. Cluster mode
 
 ![Image](/assets/images/spark_cluster_mode.jpg#right)
 

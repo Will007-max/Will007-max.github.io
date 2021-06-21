@@ -173,7 +173,9 @@ larger than 20 frames/s). The analysis of a video streaming relies on the analys
 of those different images.
 
 In order to preprocess "videos" before feeding to deep learning models, I make
-some steps:
+some steps as shown in the following figure :
+
+![Image](/assets/images/video_preprocess.png#right)
 
 - I only take one frame because I could consider that during the two seconds of
 recording, the emotion state of the person doesn't change.

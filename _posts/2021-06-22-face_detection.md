@@ -41,7 +41,7 @@ import cv2
 import face_recognition
 ```
 
-## 2. Useful steps ans functions
+## 2. Useful steps and functions
 
 For face recognition, it is essential to find a way to compute the faces encodings.
 For a given person (or myself), I started with a portrait picture to learn embeddings.

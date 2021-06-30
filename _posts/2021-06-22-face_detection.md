@@ -4,7 +4,7 @@ layout: single
 header:
     teaser: /assets/images/face_detection_banner.jpg
 author_profile: true
-categories: project
+categories: projects
 read_time: true
 comments : true
 toc: true

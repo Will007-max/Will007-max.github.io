@@ -4,7 +4,7 @@ layout: single
 header:
     teaser: /assets/images/streamlit_emotion.png
 author_profile: true
-categories: project
+categories: projects
 read_time: true
 comments : true
 toc: true

@@ -1,5 +1,5 @@
 ---
-title: AWS (writing in progress...)
+title: AWS Storage 
 layout: single
 header:
     teaser: /assets/images/aws_storage.png

@@ -1,5 +1,5 @@
 ---
-title: AWS (writing in progress...)
+title: AWS Linux
 layout: single
 header:
     teaser: /assets/images/aws_linux.png

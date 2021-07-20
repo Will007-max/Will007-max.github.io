@@ -8,9 +8,6 @@ author_profile: true
 
 A series of projects I realized and I currently realize...
 
-<br>
-<br>
-
 <div class="grid__wrapper">
     {% for post in site.posts %}
         {% if post.categories contains 'projects' %}
